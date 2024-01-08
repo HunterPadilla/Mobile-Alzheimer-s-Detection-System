@@ -1,0 +1,1 @@
+A Mobile Application designed to allow the user to test their movements utilizing their cellphone camera in order to test their gait and balance, communicating that data with an artificial intelligence which will make a prediction on the status of Alzheimer's condition in the patient based on that data.
