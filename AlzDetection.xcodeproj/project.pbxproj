@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD782B4C6A0000000428 /* AppDelegate.swift */; };
+		325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */; };
+		325ADD7D2B4C6A0000000428 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD7C2B4C6A0000000428 /* ViewController.swift */; };
+		325ADD802B4C6A0000000428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325ADD7E2B4C6A0000000428 /* Main.storyboard */; };
+		325ADD822B4C6A0100000428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325ADD812B4C6A0100000428 /* Assets.xcassets */; };
+		325ADD852B4C6A0100000428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325ADD832B4C6A0100000428 /* LaunchScreen.storyboard */; };
+		325ADD902B4C6A0100000428 /* AlzDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD8F2B4C6A0100000428 /* AlzDetectionTests.swift */; };
+		325ADD9A2B4C6A0100000428 /* AlzDetectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD992B4C6A0100000428 /* AlzDetectionUITests.swift */; };
+		325ADD9C2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD9B2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		325ADD8C2B4C6A0100000428 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 325ADD6D2B4C6A0000000428 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 325ADD742B4C6A0000000428;
+			remoteInfo = AlzDetection;
+		};
+		325ADD962B4C6A0100000428 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 325ADD6D2B4C6A0000000428 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 325ADD742B4C6A0000000428;
+			remoteInfo = AlzDetection;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		325ADD752B4C6A0000000428 /* AlzDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlzDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		325ADD782B4C6A0000000428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		325ADD7C2B4C6A0000000428 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		325ADD7F2B4C6A0000000428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		325ADD812B4C6A0100000428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		325ADD842B4C6A0100000428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		325ADD862B4C6A0100000428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325ADD8B2B4C6A0100000428 /* AlzDetectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzDetectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		325ADD8F2B4C6A0100000428 /* AlzDetectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzDetectionTests.swift; sourceTree = "<group>"; };
+		325ADD952B4C6A0100000428 /* AlzDetectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzDetectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		325ADD992B4C6A0100000428 /* AlzDetectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzDetectionUITests.swift; sourceTree = "<group>"; };
+		325ADD9B2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzDetectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		325ADD722B4C6A0000000428 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325ADD882B4C6A0100000428 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325ADD922B4C6A0100000428 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		325ADD6C2B4C6A0000000428 = {
+			isa = PBXGroup;
+			children = (
+				325ADD772B4C6A0000000428 /* AlzDetection */,
+				325ADD8E2B4C6A0100000428 /* AlzDetectionTests */,
+				325ADD982B4C6A0100000428 /* AlzDetectionUITests */,
+				325ADD762B4C6A0000000428 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		325ADD762B4C6A0000000428 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				325ADD752B4C6A0000000428 /* AlzDetection.app */,
+				325ADD8B2B4C6A0100000428 /* AlzDetectionTests.xctest */,
+				325ADD952B4C6A0100000428 /* AlzDetectionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		325ADD772B4C6A0000000428 /* AlzDetection */ = {
+			isa = PBXGroup;
+			children = (
+				325ADD782B4C6A0000000428 /* AppDelegate.swift */,
+				325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */,
+				325ADD7C2B4C6A0000000428 /* ViewController.swift */,
+				325ADD7E2B4C6A0000000428 /* Main.storyboard */,
+				325ADD812B4C6A0100000428 /* Assets.xcassets */,
+				325ADD832B4C6A0100000428 /* LaunchScreen.storyboard */,
+				325ADD862B4C6A0100000428 /* Info.plist */,
+			);
+			path = AlzDetection;
+			sourceTree = "<group>";
+		};
+		325ADD8E2B4C6A0100000428 /* AlzDetectionTests */ = {
+			isa = PBXGroup;
+			children = (
+				325ADD8F2B4C6A0100000428 /* AlzDetectionTests.swift */,
+			);
+			path = AlzDetectionTests;
+			sourceTree = "<group>";
+		};
+		325ADD982B4C6A0100000428 /* AlzDetectionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				325ADD992B4C6A0100000428 /* AlzDetectionUITests.swift */,
+				325ADD9B2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift */,
+			);
+			path = AlzDetectionUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		325ADD742B4C6A0000000428 /* AlzDetection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325ADD9F2B4C6A0100000428 /* Build configuration list for PBXNativeTarget "AlzDetection" */;
+			buildPhases = (
+				325ADD712B4C6A0000000428 /* Sources */,
+				325ADD722B4C6A0000000428 /* Frameworks */,
+				325ADD732B4C6A0000000428 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlzDetection;
+			productName = AlzDetection;
+			productReference = 325ADD752B4C6A0000000428 /* AlzDetection.app */;
+			productType = "com.apple.product-type.application";
+		};
+		325ADD8A2B4C6A0100000428 /* AlzDetectionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325ADDA22B4C6A0100000428 /* Build configuration list for PBXNativeTarget "AlzDetectionTests" */;
+			buildPhases = (
+				325ADD872B4C6A0100000428 /* Sources */,
+				325ADD882B4C6A0100000428 /* Frameworks */,
+				325ADD892B4C6A0100000428 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				325ADD8D2B4C6A0100000428 /* PBXTargetDependency */,
+			);
+			name = AlzDetectionTests;
+			productName = AlzDetectionTests;
+			productReference = 325ADD8B2B4C6A0100000428 /* AlzDetectionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		325ADD942B4C6A0100000428 /* AlzDetectionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 325ADDA52B4C6A0100000428 /* Build configuration list for PBXNativeTarget "AlzDetectionUITests" */;
+			buildPhases = (
+				325ADD912B4C6A0100000428 /* Sources */,
+				325ADD922B4C6A0100000428 /* Frameworks */,
+				325ADD932B4C6A0100000428 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				325ADD972B4C6A0100000428 /* PBXTargetDependency */,
+			);
+			name = AlzDetectionUITests;
+			productName = AlzDetectionUITests;
+			productReference = 325ADD952B4C6A0100000428 /* AlzDetectionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		325ADD6D2B4C6A0000000428 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					325ADD742B4C6A0000000428 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					325ADD8A2B4C6A0100000428 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 325ADD742B4C6A0000000428;
+					};
+					325ADD942B4C6A0100000428 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 325ADD742B4C6A0000000428;
+					};
+				};
+			};
+			buildConfigurationList = 325ADD702B4C6A0000000428 /* Build configuration list for PBXProject "AlzDetection" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 325ADD6C2B4C6A0000000428;
+			productRefGroup = 325ADD762B4C6A0000000428 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				325ADD742B4C6A0000000428 /* AlzDetection */,
+				325ADD8A2B4C6A0100000428 /* AlzDetectionTests */,
+				325ADD942B4C6A0100000428 /* AlzDetectionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		325ADD732B4C6A0000000428 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325ADD852B4C6A0100000428 /* LaunchScreen.storyboard in Resources */,
+				325ADD822B4C6A0100000428 /* Assets.xcassets in Resources */,
+				325ADD802B4C6A0000000428 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325ADD892B4C6A0100000428 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325ADD932B4C6A0100000428 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		325ADD712B4C6A0000000428 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325ADD7D2B4C6A0000000428 /* ViewController.swift in Sources */,
+				325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */,
+				325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325ADD872B4C6A0100000428 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325ADD902B4C6A0100000428 /* AlzDetectionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		325ADD912B4C6A0100000428 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325ADD9C2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift in Sources */,
+				325ADD9A2B4C6A0100000428 /* AlzDetectionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		325ADD8D2B4C6A0100000428 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 325ADD742B4C6A0000000428 /* AlzDetection */;
+			targetProxy = 325ADD8C2B4C6A0100000428 /* PBXContainerItemProxy */;
+		};
+		325ADD972B4C6A0100000428 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 325ADD742B4C6A0000000428 /* AlzDetection */;
+			targetProxy = 325ADD962B4C6A0100000428 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		325ADD7E2B4C6A0000000428 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325ADD7F2B4C6A0000000428 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		325ADD832B4C6A0100000428 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325ADD842B4C6A0100000428 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		325ADD9D2B4C6A0100000428 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		325ADD9E2B4C6A0100000428 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		325ADDA02B4C6A0100000428 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlzDetection/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		325ADDA12B4C6A0100000428 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlzDetection/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		325ADDA32B4C6A0100000428 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetectionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlzDetection.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AlzDetection";
+			};
+			name = Debug;
+		};
+		325ADDA42B4C6A0100000428 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetectionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlzDetection.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AlzDetection";
+			};
+			name = Release;
+		};
+		325ADDA62B4C6A0100000428 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetectionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AlzDetection;
+			};
+			name = Debug;
+		};
+		325ADDA72B4C6A0100000428 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetectionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AlzDetection;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		325ADD702B4C6A0000000428 /* Build configuration list for PBXProject "AlzDetection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325ADD9D2B4C6A0100000428 /* Debug */,
+				325ADD9E2B4C6A0100000428 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325ADD9F2B4C6A0100000428 /* Build configuration list for PBXNativeTarget "AlzDetection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325ADDA02B4C6A0100000428 /* Debug */,
+				325ADDA12B4C6A0100000428 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325ADDA22B4C6A0100000428 /* Build configuration list for PBXNativeTarget "AlzDetectionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325ADDA32B4C6A0100000428 /* Debug */,
+				325ADDA42B4C6A0100000428 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		325ADDA52B4C6A0100000428 /* Build configuration list for PBXNativeTarget "AlzDetectionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325ADDA62B4C6A0100000428 /* Debug */,
+				325ADDA72B4C6A0100000428 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 325ADD6D2B4C6A0000000428 /* Project object */;
+}
