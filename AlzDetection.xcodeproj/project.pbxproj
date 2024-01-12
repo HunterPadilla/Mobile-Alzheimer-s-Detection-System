@@ -16,6 +16,9 @@
 		325ADD902B4C6A0100000428 /* AlzDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD8F2B4C6A0100000428 /* AlzDetectionTests.swift */; };
 		325ADD9A2B4C6A0100000428 /* AlzDetectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD992B4C6A0100000428 /* AlzDetectionUITests.swift */; };
 		325ADD9C2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD9B2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift */; };
+		326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FCECF2B51E47500E401BD /* HomeViewController.swift */; };
+		326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FCED12B51E6A800E401BD /* SignUpViewController.swift */; };
+		32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C95C242B4F7F1700DC358D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		325ADD952B4C6A0100000428 /* AlzDetectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzDetectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		325ADD992B4C6A0100000428 /* AlzDetectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzDetectionUITests.swift; sourceTree = "<group>"; };
 		325ADD9B2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzDetectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		326FCECF2B51E47500E401BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		326FCED12B51E6A800E401BD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		32C95C242B4F7F1700DC358D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +109,11 @@
 				325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */,
 				325ADD7C2B4C6A0000000428 /* ViewController.swift */,
 				325ADD7E2B4C6A0000000428 /* Main.storyboard */,
-				325ADD812B4C6A0100000428 /* Assets.xcassets */,
 				325ADD832B4C6A0100000428 /* LaunchScreen.storyboard */,
+				32C95C242B4F7F1700DC358D /* LoginViewController.swift */,
+				326FCED12B51E6A800E401BD /* SignUpViewController.swift */,
+				326FCECF2B51E47500E401BD /* HomeViewController.swift */,
+				325ADD812B4C6A0100000428 /* Assets.xcassets */,
 				325ADD862B4C6A0100000428 /* Info.plist */,
 			);
 			path = AlzDetection;
@@ -258,6 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */,
+				326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */,
+				32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */,
 				325ADD7D2B4C6A0000000428 /* ViewController.swift in Sources */,
 				325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */,
 				325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */,
