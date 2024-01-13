@@ -19,6 +19,7 @@
 		326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FCECF2B51E47500E401BD /* HomeViewController.swift */; };
 		326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FCED12B51E6A800E401BD /* SignUpViewController.swift */; };
 		32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C95C242B4F7F1700DC358D /* LoginViewController.swift */; };
+		4B3D7A372B52F2B700BE6BE9 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D7A362B52F2B700BE6BE9 /* ThankYouViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		326FCECF2B51E47500E401BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		326FCED12B51E6A800E401BD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		32C95C242B4F7F1700DC358D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4B3D7A362B52F2B700BE6BE9 /* ThankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				32C95C242B4F7F1700DC358D /* LoginViewController.swift */,
 				326FCED12B51E6A800E401BD /* SignUpViewController.swift */,
 				326FCECF2B51E47500E401BD /* HomeViewController.swift */,
+				4B3D7A362B52F2B700BE6BE9 /* ThankYouViewController.swift */,
 				325ADD812B4C6A0100000428 /* Assets.xcassets */,
 				325ADD862B4C6A0100000428 /* Info.plist */,
 			);
@@ -270,6 +273,7 @@
 				326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */,
 				326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */,
 				32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */,
+				4B3D7A372B52F2B700BE6BE9 /* ThankYouViewController.swift in Sources */,
 				325ADD7D2B4C6A0000000428 /* ViewController.swift in Sources */,
 				325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */,
 				325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */,
