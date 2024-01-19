@@ -18,8 +18,11 @@
 		325ADD9C2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD9B2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift */; };
 		326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FCECF2B51E47500E401BD /* HomeViewController.swift */; };
 		326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FCED12B51E6A800E401BD /* SignUpViewController.swift */; };
+		326FCED52B59B1E600E401BD /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 326FCED42B59B1E600E401BD /* AWSAPIPlugin */; };
+		326FCED72B59B1E600E401BD /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 326FCED62B59B1E600E401BD /* AWSCognitoAuthPlugin */; };
+		326FCED92B59B1E600E401BD /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 326FCED82B59B1E600E401BD /* AWSDataStorePlugin */; };
+		326FCEDB2B59B1E600E401BD /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 326FCEDA2B59B1E600E401BD /* Amplify */; };
 		32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C95C242B4F7F1700DC358D /* LoginViewController.swift */; };
-		4B3D7A372B52F2B700BE6BE9 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D7A362B52F2B700BE6BE9 /* ThankYouViewController.swift */; };
 		758966E5F3EA2ADED0D3A50D /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = AAC67A7C4E59D36AC52E5303 /* awsconfiguration.json */; };
 		7B39E01C60F48E9BF194595B /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 839064B7D0B3AB1E6BF3A79F /* amplifyconfiguration.json */; };
 /* End PBXBuildFile section */
@@ -58,9 +61,8 @@
 		326FCECF2B51E47500E401BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		326FCED12B51E6A800E401BD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		32C95C242B4F7F1700DC358D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4B3D7A362B52F2B700BE6BE9 /* ThankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
-		839064B7D0B3AB1E6BF3A79F /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
-		AAC67A7C4E59D36AC52E5303 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; lastKnownFileType = text.json; name = awsconfiguration.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		839064B7D0B3AB1E6BF3A79F /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		AAC67A7C4E59D36AC52E5303 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326FCED92B59B1E600E401BD /* AWSDataStorePlugin in Frameworks */,
+				326FCEDB2B59B1E600E401BD /* Amplify in Frameworks */,
+				326FCED52B59B1E600E401BD /* AWSAPIPlugin in Frameworks */,
+				326FCED72B59B1E600E401BD /* AWSCognitoAuthPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +127,6 @@
 				32C95C242B4F7F1700DC358D /* LoginViewController.swift */,
 				326FCED12B51E6A800E401BD /* SignUpViewController.swift */,
 				326FCECF2B51E47500E401BD /* HomeViewController.swift */,
-				4B3D7A362B52F2B700BE6BE9 /* ThankYouViewController.swift */,
 				325ADD812B4C6A0100000428 /* Assets.xcassets */,
 				325ADD862B4C6A0100000428 /* Info.plist */,
 			);
@@ -177,6 +182,12 @@
 			dependencies = (
 			);
 			name = AlzDetection;
+			packageProductDependencies = (
+				326FCED42B59B1E600E401BD /* AWSAPIPlugin */,
+				326FCED62B59B1E600E401BD /* AWSCognitoAuthPlugin */,
+				326FCED82B59B1E600E401BD /* AWSDataStorePlugin */,
+				326FCEDA2B59B1E600E401BD /* Amplify */,
+			);
 			productName = AlzDetection;
 			productReference = 325ADD752B4C6A0000000428 /* AlzDetection.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +260,9 @@
 				Base,
 			);
 			mainGroup = 325ADD6C2B4C6A0000000428;
+			packageReferences = (
+				326FCED32B59B1E600E401BD /* XCRemoteSwiftPackageReference "amplify-ios" */,
+			);
 			productRefGroup = 325ADD762B4C6A0000000428 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,7 +311,6 @@
 				326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */,
 				326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */,
 				32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */,
-				4B3D7A372B52F2B700BE6BE9 /* ThankYouViewController.swift in Sources */,
 				325ADD7D2B4C6A0000000428 /* ViewController.swift in Sources */,
 				325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */,
 				325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */,
@@ -647,6 +660,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		326FCED32B59B1E600E401BD /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.25.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		326FCED42B59B1E600E401BD /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 326FCED32B59B1E600E401BD /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSAPIPlugin;
+		};
+		326FCED62B59B1E600E401BD /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 326FCED32B59B1E600E401BD /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSCognitoAuthPlugin;
+		};
+		326FCED82B59B1E600E401BD /* AWSDataStorePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 326FCED32B59B1E600E401BD /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSDataStorePlugin;
+		};
+		326FCEDA2B59B1E600E401BD /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 326FCED32B59B1E600E401BD /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = Amplify;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 325ADD6D2B4C6A0000000428 /* Project object */;
 }
