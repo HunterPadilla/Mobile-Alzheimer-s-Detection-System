@@ -23,6 +23,11 @@
 		326FCED92B59B1E600E401BD /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 326FCED82B59B1E600E401BD /* AWSDataStorePlugin */; };
 		326FCEDB2B59B1E600E401BD /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 326FCEDA2B59B1E600E401BD /* Amplify */; };
 		32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C95C242B4F7F1700DC358D /* LoginViewController.swift */; };
+		4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */; };
+		4B849BEB2B5C2B4200B6A506 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */; };
+		4B849BED2B5C2C1D00B6A506 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */; };
+		4B849BEF2B5C2CC900B6A506 /* ClinicianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEE2B5C2CC900B6A506 /* ClinicianViewController.swift */; };
+		4B849BF12B5C2E5F00B6A506 /* ResultsSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */; };
 		758966E5F3EA2ADED0D3A50D /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = AAC67A7C4E59D36AC52E5303 /* awsconfiguration.json */; };
 		7B39E01C60F48E9BF194595B /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 839064B7D0B3AB1E6BF3A79F /* amplifyconfiguration.json */; };
 /* End PBXBuildFile section */
@@ -61,6 +66,11 @@
 		326FCECF2B51E47500E401BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		326FCED12B51E6A800E401BD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		32C95C242B4F7F1700DC358D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
+		4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		4B849BEE2B5C2CC900B6A506 /* ClinicianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicianViewController.swift; sourceTree = "<group>"; };
+		4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsSentViewController.swift; sourceTree = "<group>"; };
 		839064B7D0B3AB1E6BF3A79F /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		AAC67A7C4E59D36AC52E5303 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +137,11 @@
 				32C95C242B4F7F1700DC358D /* LoginViewController.swift */,
 				326FCED12B51E6A800E401BD /* SignUpViewController.swift */,
 				326FCECF2B51E47500E401BD /* HomeViewController.swift */,
+				4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */,
+				4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */,
+				4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */,
+				4B849BEE2B5C2CC900B6A506 /* ClinicianViewController.swift */,
+				4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */,
 				325ADD812B4C6A0100000428 /* Assets.xcassets */,
 				325ADD862B4C6A0100000428 /* Info.plist */,
 			);
@@ -308,11 +323,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B849BF12B5C2E5F00B6A506 /* ResultsSentViewController.swift in Sources */,
 				326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */,
 				326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */,
 				32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */,
+				4B849BEF2B5C2CC900B6A506 /* ClinicianViewController.swift in Sources */,
+				4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */,
 				325ADD7D2B4C6A0000000428 /* ViewController.swift in Sources */,
+				4B849BED2B5C2C1D00B6A506 /* ResultsViewController.swift in Sources */,
 				325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */,
+				4B849BEB2B5C2B4200B6A506 /* InstructionsViewController.swift in Sources */,
 				325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
