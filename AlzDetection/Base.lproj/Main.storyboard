@@ -169,7 +169,7 @@
             <objects>
                 <viewController storyboardIdentifier="MainMenu" title="Home View" id="yzf-PV-9cy" customClass="HomeViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1M5-qn-gMI">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" translatesAutoresizingMaskIntoConstraints="NO" id="oWm-Xf-M27">
@@ -209,7 +209,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZL8-X2-mFP">
-                                <rect key="frame" x="125" y="409" width="143" height="35"/>
+                                <rect key="frame" x="125" y="399" width="143" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Begin New Test"/>
                                 <connections>
@@ -218,7 +218,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfg-k8-898">
-                                <rect key="frame" x="107" y="521" width="179" height="35"/>
+                                <rect key="frame" x="107" y="511" width="179" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View Recent Results"/>
                                 <connections>
@@ -317,7 +317,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Main Menu" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYf-wJ-dDl">
-                                <rect key="frame" x="148" y="649" width="97" height="34"/>
+                                <rect key="frame" x="148" y="639" width="99" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -325,23 +325,21 @@
                                     <segue destination="yzf-PV-9cy" kind="presentation" id="A8U-yo-Ymq"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions on what to do when continuing to perform trial" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAF-JW-ghY">
-                                <rect key="frame" x="27" y="146" width="339" height="341"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="341" id="kyh-Zw-6Yl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xc2-Lp-kig">
-                                <rect key="frame" x="131" y="579" width="131" height="35"/>
+                                <rect key="frame" x="131" y="569" width="131" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Perform Trials"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igx-IY-5k6">
-                                <rect key="frame" x="132.66666666666666" y="80" width="127.99999999999997" height="30"/>
+                                <rect key="frame" x="132.66666666666666" y="80" width="127.66666666666666" height="30"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAF-JW-ghY">
+                                <rect key="frame" x="35" y="208" width="325" height="143.33333333333337"/>
+                                <string key="text">On the next screen, you will first be shown an example task. Once you confirm that you are ready, you will perform the example task that was shown to you before moving on to the next task.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -349,16 +347,16 @@
                         <viewLayoutGuide key="safeArea" id="2Ei-8o-YkE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yAF-JW-ghY" firstAttribute="top" secondItem="igx-IY-5k6" secondAttribute="bottom" constant="36" id="I00-c4-vjk"/>
-                            <constraint firstItem="yAF-JW-ghY" firstAttribute="centerX" secondItem="Xc2-Lp-kig" secondAttribute="centerX" id="MCX-En-jCO"/>
-                            <constraint firstItem="yAF-JW-ghY" firstAttribute="leading" secondItem="2Ei-8o-YkE" secondAttribute="leading" constant="27" id="VSA-Ew-C1d"/>
-                            <constraint firstItem="RYf-wJ-dDl" firstAttribute="centerX" secondItem="igx-IY-5k6" secondAttribute="centerX" id="b0x-Y3-6YV"/>
-                            <constraint firstItem="RYf-wJ-dDl" firstAttribute="leading" secondItem="2Ei-8o-YkE" secondAttribute="leading" constant="148" id="b7o-9n-WGX"/>
-                            <constraint firstItem="RYf-wJ-dDl" firstAttribute="top" secondItem="Xc2-Lp-kig" secondAttribute="bottom" constant="35" id="bTh-xc-kTc"/>
-                            <constraint firstItem="yAF-JW-ghY" firstAttribute="top" secondItem="VDt-ez-zeM" secondAttribute="top" constant="146" id="mTV-12-igE"/>
-                            <constraint firstItem="yAF-JW-ghY" firstAttribute="centerX" secondItem="RYf-wJ-dDl" secondAttribute="centerX" id="qgR-Ba-xGL"/>
-                            <constraint firstItem="Xc2-Lp-kig" firstAttribute="top" secondItem="yAF-JW-ghY" secondAttribute="bottom" constant="92" id="swL-1x-QZr"/>
-                            <constraint firstItem="yAF-JW-ghY" firstAttribute="centerX" secondItem="VDt-ez-zeM" secondAttribute="centerX" id="x5z-iR-QwJ"/>
+                            <constraint firstItem="Xc2-Lp-kig" firstAttribute="centerX" secondItem="yAF-JW-ghY" secondAttribute="centerX" constant="-1" id="1sg-Tm-sXn"/>
+                            <constraint firstItem="yAF-JW-ghY" firstAttribute="leading" secondItem="2Ei-8o-YkE" secondAttribute="leading" constant="35" id="5rK-pq-0eA"/>
+                            <constraint firstItem="yAF-JW-ghY" firstAttribute="top" secondItem="2Ei-8o-YkE" secondAttribute="top" constant="208" id="78G-YH-VTQ"/>
+                            <constraint firstItem="igx-IY-5k6" firstAttribute="top" secondItem="2Ei-8o-YkE" secondAttribute="top" constant="80" id="7Pw-dn-TnF"/>
+                            <constraint firstItem="igx-IY-5k6" firstAttribute="centerX" secondItem="yAF-JW-ghY" secondAttribute="centerX" constant="-1" id="MWl-26-LdQ"/>
+                            <constraint firstItem="RYf-wJ-dDl" firstAttribute="centerX" secondItem="igx-IY-5k6" secondAttribute="centerX" constant="1" id="Naq-Gs-3yq"/>
+                            <constraint firstItem="RYf-wJ-dDl" firstAttribute="top" secondItem="Xc2-Lp-kig" secondAttribute="bottom" constant="35" id="OqU-Zn-3Ug"/>
+                            <constraint firstItem="RYf-wJ-dDl" firstAttribute="leading" secondItem="2Ei-8o-YkE" secondAttribute="leading" constant="148" id="RXr-MH-QsA"/>
+                            <constraint firstItem="2Ei-8o-YkE" firstAttribute="bottom" secondItem="RYf-wJ-dDl" secondAttribute="bottom" constant="179" id="Z44-do-pJi"/>
+                            <constraint firstItem="igx-IY-5k6" firstAttribute="centerX" secondItem="VDt-ez-zeM" secondAttribute="centerX" id="ex7-LN-UnY"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -498,6 +496,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Continue to Main Menu"/>
                                 <connections>
+                                    <action selector="MainMenuButton" destination="k17-Uv-L9R" eventType="touchUpInside" id="jWl-Qd-edH"/>
                                     <segue destination="yzf-PV-9cy" kind="presentation" id="NDe-wU-hqF"/>
                                 </connections>
                             </button>
@@ -524,12 +523,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DI6-bY-Nw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3140" y="1041"/>
+            <point key="canvasLocation" x="3140" y="1040"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Ydm-6E-b02"/>
-        <segue reference="0ge-wY-CQW"/>
+        <segue reference="NDe-wU-hqF"/>
         <segue reference="8rB-Ls-QGp"/>
     </inferredMetricsTieBreakers>
     <resources>
