@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-alzheimersdetectiona-staging-171415-authRole",
+      "UnauthRoleArn": "arn:aws:iam::531574310821:role/amplify-alzheimersdetectiona-staging-171415-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::531574310821:role/amplify-alzheimersdetectiona-staging-171415-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-alzheimersdetectiona-staging-171415-deployment",
+      "UnauthRoleName": "amplify-alzheimersdetectiona-staging-171415-unauthRole",
+      "StackName": "amplify-alzheimersdetectiona-staging-171415",
+      "StackId": "arn:aws:cloudformation:us-east-2:531574310821:stack/amplify-alzheimersdetectiona-staging-171415/ad30b760-b492-11ee-ae33-0278ceb6e7ed",
+      "AmplifyAppId": "dvyurvhl1lu11"
+    },
+    "categories": {
+      "auth": {
+        "AlzheimersDetectionAppTempName": {}
+      }
+    }
+  }
+}
