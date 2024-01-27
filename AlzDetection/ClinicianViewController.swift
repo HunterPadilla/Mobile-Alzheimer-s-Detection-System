@@ -30,9 +30,9 @@ class ClinicianViewController: UIViewController, MFMailComposeViewControllerDele
             if MFMailComposeViewController.canSendMail(){
                 let composeMail = MFMailComposeViewController()
                 composeMail.delegate = self
-                composeMail.setSubject("Patient Results Available")
+                composeMail.setSubject("Patient Results Available!")
                 composeMail.setToRecipients([email])
-                composeMail.setMessageBody(<#T##body: String##String#>, isHTML: true)
+                composeMail.setMessageBody("<h1>Patient Results Available!</h1> <p>One of your patient have completed a trial and and wants to share their results with you!</p>", isHTML: true)
                 composeMail.addAttachmentData(<#T##attachment: Data##Data#>, mimeType: <#T##String#>, fileName: <#T##String#>)
                 present(composeMail, animated: true)
                 present(UINavigationController(rootViewController: composeMail), animated: true)
