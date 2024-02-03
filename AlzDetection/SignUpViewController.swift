@@ -19,6 +19,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var ConfirmationCodeTextField: UITextField!
     
     
+    @IBAction func cancelSignup(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
     @IBAction func SignupButton(_ sender: Any) {
         Task { @MainActor in

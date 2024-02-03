@@ -14,7 +14,7 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -50,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             let session = try await Amplify.Auth.fetchAuthSession()
             print("Is user signed in - \(session.isSignedIn)")
+            
         } catch let error as AuthError {
             print("Fetch session failed with error \(error)")
         } catch {

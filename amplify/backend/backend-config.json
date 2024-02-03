@@ -1,6 +1,6 @@
 {
   "auth": {
-    "AlzheimersDetectionAppTempName": {
+    "AwareMind": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {

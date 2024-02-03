@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "aespa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/enebin/Aespa.git",
+      "state" : {
+        "revision" : "2e7e1e0939c2a84fc17c88d9e1a18d6c9376a12a",
+        "version" : "0.5.0"
+      }
+    },
+    {
       "identity" : "amplify-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/aws-amplify/amplify-ios",

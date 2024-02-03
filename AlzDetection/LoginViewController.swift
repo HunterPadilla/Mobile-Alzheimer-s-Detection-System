@@ -16,8 +16,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var PasswordTextField: UITextField!
     
-    @IBOutlet var imageView: UIView!
-    
     @IBAction func LoginButton(_ sender: Any) {
         Task { @MainActor in
             let username: String = UsernameTextField.text!
@@ -31,7 +29,7 @@ class LoginViewController: UIViewController {
                 )
                 if signInResult.isSignedIn {
                     print("Sign in succeeded")
-                    performSegue(withIdentifier: "loggedIn", sender: nil)
+                    performSegue(withIdentifier: "loginSuccess", sender: nil)
                 }
             } catch let error as AuthError {
                 print("Sign in failed \(error)")
