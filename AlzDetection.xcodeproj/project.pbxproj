@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32275CFE2B6DA40D001E08FA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32275CFD2B6DA40D001E08FA /* PhotoViewController.swift */; };
+		32275D012B6DA796001E08FA /* Aespa in Frameworks */ = {isa = PBXBuildFile; productRef = 32275D002B6DA796001E08FA /* Aespa */; };
 		325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD782B4C6A0000000428 /* AppDelegate.swift */; };
 		325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */; };
 		325ADD802B4C6A0000000428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325ADD7E2B4C6A0000000428 /* Main.storyboard */; };
@@ -21,7 +23,7 @@
 		326FCED72B59B1E600E401BD /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 326FCED62B59B1E600E401BD /* AWSCognitoAuthPlugin */; };
 		326FCED92B59B1E600E401BD /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 326FCED82B59B1E600E401BD /* AWSDataStorePlugin */; };
 		326FCEDB2B59B1E600E401BD /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 326FCEDA2B59B1E600E401BD /* Amplify */; };
-		3283DF1C2B63157800084997 /* BeginTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DF1B2B63157800084997 /* BeginTestViewController.swift */; };
+		3283DF1C2B63157800084997 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283DF1B2B63157800084997 /* CustomCameraController.swift */; };
 		32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C95C242B4F7F1700DC358D /* LoginViewController.swift */; };
 		4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */; };
 		4B849BEB2B5C2B4200B6A506 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */; };
@@ -50,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32275CFD2B6DA40D001E08FA /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		325ADD752B4C6A0000000428 /* AlzDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlzDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		325ADD782B4C6A0000000428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +67,7 @@
 		325ADD9B2B4C6A0100000428 /* AlzDetectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzDetectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		326FCECF2B51E47500E401BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		326FCED12B51E6A800E401BD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		3283DF1B2B63157800084997 /* BeginTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginTestViewController.swift; sourceTree = "<group>"; };
+		3283DF1B2B63157800084997 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		32C95C242B4F7F1700DC358D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			files = (
 				326FCED92B59B1E600E401BD /* AWSDataStorePlugin in Frameworks */,
 				326FCEDB2B59B1E600E401BD /* Amplify in Frameworks */,
+				32275D012B6DA796001E08FA /* Aespa in Frameworks */,
 				326FCED52B59B1E600E401BD /* AWSAPIPlugin in Frameworks */,
 				326FCED72B59B1E600E401BD /* AWSCognitoAuthPlugin in Frameworks */,
 			);
@@ -143,7 +147,8 @@
 				4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */,
 				325ADD812B4C6A0100000428 /* Assets.xcassets */,
 				325ADD862B4C6A0100000428 /* Info.plist */,
-				3283DF1B2B63157800084997 /* BeginTestViewController.swift */,
+				32275CFD2B6DA40D001E08FA /* PhotoViewController.swift */,
+				3283DF1B2B63157800084997 /* CustomCameraController.swift */,
 			);
 			path = AlzDetection;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				326FCED62B59B1E600E401BD /* AWSCognitoAuthPlugin */,
 				326FCED82B59B1E600E401BD /* AWSDataStorePlugin */,
 				326FCEDA2B59B1E600E401BD /* Amplify */,
+				32275D002B6DA796001E08FA /* Aespa */,
 			);
 			productName = AlzDetection;
 			productReference = 325ADD752B4C6A0000000428 /* AlzDetection.app */;
@@ -277,6 +283,7 @@
 			mainGroup = 325ADD6C2B4C6A0000000428;
 			packageReferences = (
 				326FCED32B59B1E600E401BD /* XCRemoteSwiftPackageReference "amplify-ios" */,
+				32275CFF2B6DA796001E08FA /* XCRemoteSwiftPackageReference "Aespa" */,
 			);
 			productRefGroup = 325ADD762B4C6A0000000428 /* Products */;
 			projectDirPath = "";
@@ -327,7 +334,8 @@
 				326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */,
 				326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */,
 				32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */,
-				3283DF1C2B63157800084997 /* BeginTestViewController.swift in Sources */,
+				3283DF1C2B63157800084997 /* CustomCameraController.swift in Sources */,
+				32275CFE2B6DA40D001E08FA /* PhotoViewController.swift in Sources */,
 				4B849BEF2B5C2CC900B6A506 /* ClinicianViewController.swift in Sources */,
 				4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */,
 				4B849BED2B5C2C1D00B6A506 /* ResultsViewController.swift in Sources */,
@@ -518,6 +526,7 @@
 				DEVELOPMENT_TEAM = 2435XT3Q88;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzDetection/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application may require the usage of your front/back facing camera in order to record movement data. Is this okay?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -546,6 +555,7 @@
 				DEVELOPMENT_TEAM = 2435XT3Q88;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzDetection/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application may require the usage of your front/back facing camera in order to record movement data. Is this okay?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -682,6 +692,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		32275CFF2B6DA796001E08FA /* XCRemoteSwiftPackageReference "Aespa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/enebin/Aespa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
 		326FCED32B59B1E600E401BD /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
@@ -693,6 +711,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		32275D002B6DA796001E08FA /* Aespa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32275CFF2B6DA796001E08FA /* XCRemoteSwiftPackageReference "Aespa" */;
+			productName = Aespa;
+		};
 		326FCED42B59B1E600E401BD /* AWSAPIPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 326FCED32B59B1E600E401BD /* XCRemoteSwiftPackageReference "amplify-ios" */;

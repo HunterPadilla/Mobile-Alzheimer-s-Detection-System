@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bNl-Zc-vle">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VpD-yI-dc0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -196,9 +196,9 @@
         <!--Home View-->
         <scene sceneID="H3V-Lg-ku9">
             <objects>
-                <viewController storyboardIdentifier="MainMenu" title="Home View" id="yzf-PV-9cy" customClass="HomeViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenu" title="Home View" modalPresentationStyle="fullScreen" id="yzf-PV-9cy" customClass="HomeViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1M5-qn-gMI">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" translatesAutoresizingMaskIntoConstraints="NO" id="oWm-Xf-M27">
@@ -237,7 +237,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZL8-X2-mFP">
-                                <rect key="frame" x="125" y="399" width="143" height="35"/>
+                                <rect key="frame" x="125" y="409" width="143" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Begin New Test"/>
                                 <connections>
@@ -246,7 +246,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfg-k8-898">
-                                <rect key="frame" x="107" y="511" width="179" height="35"/>
+                                <rect key="frame" x="107" y="521" width="179" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View Recent Results"/>
                                 <connections>
@@ -395,24 +395,21 @@
             </objects>
             <point key="canvasLocation" x="-274.04580152671753" y="1040.1408450704225"/>
         </scene>
-        <!--Begin Test View Controller-->
+        <!--Custom Camera View Controller-->
         <scene sceneID="fET-Ef-lA8">
             <objects>
-                <viewController id="iXM-b6-Mc0" customClass="BeginTestViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iXM-b6-Mc0" customClass="CustomCameraViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9zU-ne-c3o">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RPk-6p-QvE">
-                                <rect key="frame" x="20" y="20" width="353" height="679"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STa-hW-TPB">
                                 <rect key="frame" x="160" y="719" width="73" height="63"/>
                                 <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="amplify-icon.png"/>
                                 <connections>
-                                    <action selector="BeginRecordingButton:" destination="bXH-HQ-4WT" eventType="touchUpInside" id="IRH-qN-9Zh"/>
+                                    <action selector="recordVideo:" destination="iXM-b6-Mc0" eventType="touchUpInside" id="wc5-4V-b2q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -420,24 +417,57 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Gss-YH-YDT" firstAttribute="trailing" secondItem="RPk-6p-QvE" secondAttribute="trailing" constant="20" id="0Ro-N1-ytv"/>
+                            <constraint firstItem="Gss-YH-YDT" firstAttribute="bottom" secondItem="STa-hW-TPB" secondAttribute="bottom" constant="70" id="5Ra-qA-rVd"/>
                             <constraint firstItem="Gss-YH-YDT" firstAttribute="trailing" secondItem="STa-hW-TPB" secondAttribute="trailing" constant="160" id="DbZ-9Y-wGY"/>
-                            <constraint firstItem="RPk-6p-QvE" firstAttribute="top" secondItem="Gss-YH-YDT" secondAttribute="top" constant="20" id="JJe-SX-Cv6"/>
                             <constraint firstItem="STa-hW-TPB" firstAttribute="top" secondItem="Gss-YH-YDT" secondAttribute="top" constant="719" id="bmM-7B-seN"/>
-                            <constraint firstItem="STa-hW-TPB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gss-YH-YDT" secondAttribute="leading" id="f4d-6H-6ZN"/>
-                            <constraint firstItem="RPk-6p-QvE" firstAttribute="leading" secondItem="Gss-YH-YDT" secondAttribute="leading" constant="20" id="pi3-aQ-4BJ"/>
-                            <constraint firstItem="STa-hW-TPB" firstAttribute="top" secondItem="RPk-6p-QvE" secondAttribute="bottom" constant="20" id="tVs-mB-csr"/>
+                            <constraint firstItem="STa-hW-TPB" firstAttribute="leading" secondItem="Gss-YH-YDT" secondAttribute="leading" constant="160" id="m8m-uX-kWD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FB0-1P-yG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="1788"/>
+        </scene>
+        <!--ReviewController-->
+        <scene sceneID="klt-Oc-Kbq">
+            <objects>
+                <viewController title="ReviewController" id="k4k-BO-c2F" customClass="PhotoViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yiM-hR-pMW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pe2-wo-1n5">
+                                <rect key="frame" x="76" y="212" width="241" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="KEP-G1-rLN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TK-uB-BT3">
+                                <rect key="frame" x="159" y="515" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="saveWithSender:" destination="k4k-BO-c2F" eventType="touchUpInside" id="8tO-sR-uGh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q6g-bC-WRx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0TK-uB-BT3" firstAttribute="centerX" secondItem="yiM-hR-pMW" secondAttribute="centerX" id="1Rv-NB-UkU"/>
+                            <constraint firstItem="0TK-uB-BT3" firstAttribute="centerX" secondItem="pe2-wo-1n5" secondAttribute="centerX" id="EFK-nr-1pg"/>
+                            <constraint firstItem="pe2-wo-1n5" firstAttribute="leading" secondItem="q6g-bC-WRx" secondAttribute="leading" constant="76" id="Oqr-x3-bDV"/>
+                            <constraint firstItem="q6g-bC-WRx" firstAttribute="bottom" secondItem="0TK-uB-BT3" secondAttribute="bottom" constant="268" id="h6x-I5-04N"/>
+                            <constraint firstItem="pe2-wo-1n5" firstAttribute="top" secondItem="q6g-bC-WRx" secondAttribute="top" constant="153" id="hth-b6-v5x"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="STa-hW-TPB" id="Mbm-tj-tEI"/>
-                        <outlet property="cameraView" destination="RPk-6p-QvE" id="9pO-BU-ANO"/>
+                        <outlet property="imageView" destination="pe2-wo-1n5" id="kk0-ea-5FJ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FB0-1P-yG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="bXH-HQ-4WT" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lKN-PJ-dDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="1788"/>
+            <point key="canvasLocation" x="-274" y="2494"/>
         </scene>
         <!--Thank You Page-->
         <scene sceneID="2d7-Y0-RaR">
