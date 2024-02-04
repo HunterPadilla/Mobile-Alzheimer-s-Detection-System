@@ -295,22 +295,32 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Y5-Pe-xTc">
                                 <rect key="frame" x="35" y="176" width="323" height="458"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="458" id="NLe-P1-wyE"/>
-                                </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" id="0bv-Rr-fUa">
-                                        <rect key="frame" x="0.0" y="50" width="323" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="YMq-zF-hZV" rowHeight="60" style="IBUITableViewCellStyleDefault" id="igM-Jw-gpY" customClass="TestCell" customModule="AlzDetection" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="323" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0bv-Rr-fUa" id="WLj-Ws-LXy">
-                                            <rect key="frame" x="0.0" y="0.0" width="323" height="43.666667938232422"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="igM-Jw-gpY" id="nZ6-yj-UEb" customClass="UITableView">
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Trial 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YMq-zF-hZV">
+                                                    <rect key="frame" x="20" y="0.0" width="283" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.4352940917" green="0.7607843876" blue="0.98039215800000001" alpha="0.77000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <segue destination="FR9-UX-hyl" kind="presentation" id="umd-Do-ccy"/>
+                                            <outlet property="trialNum" destination="YMq-zF-hZV" id="d3N-2l-IqX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AG0-b4-fHS" id="K5X-Mu-2Ha"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review your results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvA-cd-7A2">
                                 <rect key="frame" x="91" y="108" width="211" height="30"/>
@@ -322,13 +332,14 @@
                         <viewLayoutGuide key="safeArea" id="6gr-dr-hfy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="top" secondItem="GvA-cd-7A2" secondAttribute="bottom" constant="38" id="Hev-AC-xf2"/>
-                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="centerX" secondItem="saX-50-faS" secondAttribute="centerX" id="Of8-zB-Zzd"/>
-                            <constraint firstItem="DgR-F7-ioc" firstAttribute="top" secondItem="2Y5-Pe-xTc" secondAttribute="bottom" constant="69" id="WXG-77-RjA"/>
-                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="top" secondItem="saX-50-faS" secondAttribute="top" constant="176" id="dIX-jn-6K2"/>
-                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="centerX" secondItem="GvA-cd-7A2" secondAttribute="centerX" id="iN4-G2-PF0"/>
-                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="leading" secondItem="6gr-dr-hfy" secondAttribute="leading" constant="35" id="mfD-aR-Agl"/>
-                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="centerX" secondItem="DgR-F7-ioc" secondAttribute="centerX" id="oEb-61-hLP"/>
+                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="leading" secondItem="6gr-dr-hfy" secondAttribute="leading" constant="35" id="CEz-rj-tIC"/>
+                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="top" secondItem="GvA-cd-7A2" secondAttribute="bottom" constant="38" id="Ifc-Li-G6p"/>
+                            <constraint firstItem="GvA-cd-7A2" firstAttribute="top" secondItem="6gr-dr-hfy" secondAttribute="top" constant="108" id="LVv-Pd-QXe"/>
+                            <constraint firstItem="DgR-F7-ioc" firstAttribute="top" secondItem="2Y5-Pe-xTc" secondAttribute="bottom" constant="69" id="Lza-sT-GmW"/>
+                            <constraint firstItem="GvA-cd-7A2" firstAttribute="centerX" secondItem="saX-50-faS" secondAttribute="centerX" id="dFN-0H-i85"/>
+                            <constraint firstItem="6gr-dr-hfy" firstAttribute="bottom" secondItem="DgR-F7-ioc" secondAttribute="bottom" constant="115" id="dY7-Ra-JR0"/>
+                            <constraint firstItem="GvA-cd-7A2" firstAttribute="centerX" secondItem="2Y5-Pe-xTc" secondAttribute="centerX" id="fiQ-Xc-uVD"/>
+                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="centerX" secondItem="DgR-F7-ioc" secondAttribute="centerX" id="qgx-07-LFb"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -516,21 +527,21 @@
             <objects>
                 <viewController storyboardIdentifier="ClinicianInfo" title="Clinician Information" id="FR9-UX-hyl" customClass="ClinicianViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4is-lh-ucP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CfC-bU-ciP">
-                                <rect key="frame" x="96" y="332" width="201" height="34"/>
+                                <rect key="frame" x="96" y="391" width="201" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c8j-s5-7Uv">
-                                <rect key="frame" x="96" y="412" width="201" height="34"/>
+                                <rect key="frame" x="96" y="471" width="201" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAv-Nk-4IC">
-                                <rect key="frame" x="134.66666666666666" y="626.66666666666663" width="123.99999999999997" height="35"/>
+                                <rect key="frame" x="134.66666666666666" y="602.66666666666663" width="123.99999999999997" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Send Results"/>
                                 <connections>
@@ -539,7 +550,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFR-iD-clB">
-                                <rect key="frame" x="126" y="711.66666666666663" width="141" height="34.333333333333371"/>
+                                <rect key="frame" x="126" y="687.66666666666663" width="141" height="34.333333333333371"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Back to Results">
@@ -551,7 +562,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter Clinician Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fES-Ac-AHU">
-                                <rect key="frame" x="38" y="154" width="317" height="97"/>
+                                <rect key="frame" x="38" y="213" width="317" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="fk1-Rm-ykQ"/>
                                 </constraints>
@@ -633,7 +644,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Aa0-JT-0We"/>
-        <segue reference="A8U-yo-Ymq"/>
+        <segue reference="1gg-h5-mqa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="amplify-icon.png" width="49" height="49"/>
