@@ -435,47 +435,6 @@
             </objects>
             <point key="canvasLocation" x="-274.04580152671753" y="1765.4929577464789"/>
         </scene>
-        <!--ReviewController-->
-        <scene sceneID="klt-Oc-Kbq">
-            <objects>
-                <viewController title="ReviewController" id="k4k-BO-c2F" customClass="PhotoViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yiM-hR-pMW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pe2-wo-1n5">
-                                <rect key="frame" x="76" y="212" width="241" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="KEP-G1-rLN"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TK-uB-BT3">
-                                <rect key="frame" x="159" y="515" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="saveWithSender:" destination="k4k-BO-c2F" eventType="touchUpInside" id="8tO-sR-uGh"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="q6g-bC-WRx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0TK-uB-BT3" firstAttribute="centerX" secondItem="yiM-hR-pMW" secondAttribute="centerX" id="1Rv-NB-UkU"/>
-                            <constraint firstItem="0TK-uB-BT3" firstAttribute="centerX" secondItem="pe2-wo-1n5" secondAttribute="centerX" id="EFK-nr-1pg"/>
-                            <constraint firstItem="pe2-wo-1n5" firstAttribute="leading" secondItem="q6g-bC-WRx" secondAttribute="leading" constant="76" id="Oqr-x3-bDV"/>
-                            <constraint firstItem="q6g-bC-WRx" firstAttribute="bottom" secondItem="0TK-uB-BT3" secondAttribute="bottom" constant="268" id="h6x-I5-04N"/>
-                            <constraint firstItem="pe2-wo-1n5" firstAttribute="top" secondItem="q6g-bC-WRx" secondAttribute="top" constant="153" id="hth-b6-v5x"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="pe2-wo-1n5" id="kk0-ea-5FJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lKN-PJ-dDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-274" y="2494"/>
-        </scene>
         <!--Thank You Page-->
         <scene sceneID="2d7-Y0-RaR">
             <objects>

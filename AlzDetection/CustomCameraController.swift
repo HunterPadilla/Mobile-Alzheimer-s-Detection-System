@@ -11,8 +11,7 @@ import Photos
 
 class CustomCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var RecordButton: UIButton!
-    
+    //Creates the video as a URL
     var videoAndImageReview = UIImagePickerController()
     var videoURL: URL?
 
@@ -20,11 +19,13 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         super.viewDidLoad()
     }
 
+    //Recording button, allows the program to access camera1 which is only available on Mobile Phones
     @IBAction func RecordAction(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = .camera
+            //LEAVE kUTTypeMove even though theres a warning!! trying to fix the warning complicates the code and causes bugs
             imagePicker.mediaTypes = [kUTTypeMovie as String]
             imagePicker.allowsEditing = true
             present(imagePicker, animated: true, completion: nil)
@@ -33,11 +34,13 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
       
+    //Image Picker Controller allows you to pick the video from your library for display purposes if necessary
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: true, completion: nil)
         
         guard
             let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String,
+            //LEAVE kUTTypeMove even though theres a warning!! trying to fix the warning complicates the code and causes bugs
             mediaType == kUTTypeMovie as String,
             let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL
         else {
@@ -58,7 +61,7 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
 
-    
+    //This function allows the program to check in case the vide finished saving correctly, and if not show the console why.
     @objc func video(_ videoPath: String, didFinishSavingWithError error: Error?, contextInfo info: AnyObject) {
         let title = (error == nil) ? "Success" : "Error"
         let message = (error == nil) ? "Video was saved" : "Video failed to save"
@@ -72,6 +75,7 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         dismiss(animated: true, completion: nil)
     }
   
+    //The actual button Function for choosing a video for display, calls upon other functions
     @IBAction func openImgVideoPicker() {
         videoAndImageReview.sourceType = .savedPhotosAlbum
         videoAndImageReview.delegate = self
@@ -79,6 +83,7 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         present(videoAndImageReview, animated: true, completion: nil)
     }
     
+    //Brings up the Video review so you could scroll through or even crop your video before saving / viewing.
     func videoAndImageReview(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let url = info[UIImagePickerController.InfoKey.mediaURL.rawValue] as? URL {
             videoURL = url
