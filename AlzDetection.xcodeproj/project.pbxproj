@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32275CFE2B6DA40D001E08FA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32275CFD2B6DA40D001E08FA /* PhotoViewController.swift */; };
 		32275D012B6DA796001E08FA /* Aespa in Frameworks */ = {isa = PBXBuildFile; productRef = 32275D002B6DA796001E08FA /* Aespa */; };
 		325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD782B4C6A0000000428 /* AppDelegate.swift */; };
 		325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */; };
@@ -51,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32275CFD2B6DA40D001E08FA /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		325ADD752B4C6A0000000428 /* AlzDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlzDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		325ADD782B4C6A0000000428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */,
 				325ADD812B4C6A0100000428 /* Assets.xcassets */,
 				325ADD862B4C6A0100000428 /* Info.plist */,
-				32275CFD2B6DA40D001E08FA /* PhotoViewController.swift */,
 				3283DF1B2B63157800084997 /* CustomCameraController.swift */,
 			);
 			path = AlzDetection;
@@ -331,7 +328,6 @@
 				326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */,
 				32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */,
 				3283DF1C2B63157800084997 /* CustomCameraController.swift in Sources */,
-				32275CFE2B6DA40D001E08FA /* PhotoViewController.swift in Sources */,
 				4B849BEF2B5C2CC900B6A506 /* ClinicianViewController.swift in Sources */,
 				4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */,
 				4B849BED2B5C2C1D00B6A506 /* ResultsViewController.swift in Sources */,
