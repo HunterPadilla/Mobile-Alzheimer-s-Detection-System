@@ -11,6 +11,7 @@ import Photos
 import Amplify
 import AWSS3
 
+
 class CustomCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //Creates the video as a URL
@@ -93,7 +94,7 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         //TASK: figure out how to save multiple myVideos that are specific to each user.
             Task { @MainActor in
                 let dataString = "My Data"
-                let userVideoKey = "myVideo.mp4"
+                let userVideoKey = "\(try await Amplify.Auth.getCurrentUser().userId).mp4"
                 guard let filename = FileManager.default.urls(
                     for: .documentDirectory,
                     in: .userDomainMask
@@ -116,7 +117,7 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
                         print("Progress: \(progress)")
                     }
                 }
-                //If upload is successful THEN performsegue to signify upload completion for the user. 
+                //If upload is successful THEN performsegue to signify upload completion for the user.
                 let data = try await uploadTask.value
                 print("Upload Completed: \(data)")
                 performSegue(withIdentifier: "uploadSuccess", sender: self)
@@ -124,8 +125,12 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
             }
         }
     
-}
     
+    
+}
+
+
+
     
 
 

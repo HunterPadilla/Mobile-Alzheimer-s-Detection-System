@@ -57,11 +57,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let session = try await Amplify.Auth.fetchAuthSession()
             print("Is user signed in - \(session.isSignedIn)")
             
+            
         } catch let error as AuthError {
             print("Fetch session failed with error \(error)")
         } catch {
             print("Unexpected error: \(error)")
         }
+        
     }
     
     
