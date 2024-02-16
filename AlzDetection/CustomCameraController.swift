@@ -91,7 +91,7 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
     @IBAction func testCompleted(_ sender: Any) {
             
         //Saves the video in the S3 bucket with the key "myVideo.mp4"
-        //TASK: figure out how to save multiple myVideos that are specific to each user.
+        //TASK: figure out how to save multiple vidoes based on DATE under the same user
             Task { @MainActor in
                 let dataString = "My Data"
                 let userVideoKey = "\(try await Amplify.Auth.getCurrentUser().userId).mp4"
