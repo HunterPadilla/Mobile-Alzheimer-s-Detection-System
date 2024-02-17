@@ -1,0 +1,18 @@
+{
+  "resourceName": "userVideo",
+  "policyUUID": "fd8125ff",
+  "bucketName": "awareminduservide",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ",
+    "CREATE_AND_UPDATE",
+    "DELETE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

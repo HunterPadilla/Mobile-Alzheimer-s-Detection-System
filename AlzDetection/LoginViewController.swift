@@ -18,10 +18,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func LoginButton(_ sender: Any) {
         Task { @MainActor in
+            
             let username: String = UsernameTextField.text!
             let password: String = PasswordTextField.text!
             
-            //func signIn(username: String, password: String) async {
+    
             do {
                 let signInResult = try await Amplify.Auth.signIn(
                     username: username,
@@ -29,6 +30,7 @@ class LoginViewController: UIViewController {
                 )
                 if signInResult.isSignedIn {
                     print("Sign in succeeded")
+                    print("Login credentials listed as: \(username) and \(password) ")
                     performSegue(withIdentifier: "loginSuccess", sender: nil)
                 }
             } catch let error as AuthError {
@@ -36,11 +38,23 @@ class LoginViewController: UIViewController {
             } catch {
                 print("Unexpected error: \(error)")
             }
+            
+            await fetchAttributes()
         }
+        
     }
         
         
-        
+    func fetchAttributes() async {
+        do {
+            let attributes = try await Amplify.Auth.fetchUserAttributes()
+            print("User attributes - \(attributes)")
+        } catch let error as AuthError{
+            print("Fetching user attributes failed with error \(error)")
+        } catch {
+            print("Unexpected error: \(error)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

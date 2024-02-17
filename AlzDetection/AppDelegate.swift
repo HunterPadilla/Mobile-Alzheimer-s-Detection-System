@@ -5,11 +5,16 @@
 //  Created by Hunter Padilla on 1/8/24.
 //
 import Amplify
-import AWSAPIPlugin
-import AWSCognitoAuthPlugin
-import AWSDataStorePlugin
 import SwiftUI
 import UIKit
+
+import AWSAPIPlugin
+import AWSCognitoAuthPlugin
+
+import Combine
+import AWSDataStorePlugin
+import AWSS3StoragePlugin
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,8 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
             do {
                 try Amplify.add(plugin: AWSCognitoAuthPlugin())
+                try Amplify.add(plugin: AWSS3StoragePlugin())
                 try Amplify.configure()
-                print("Amplify configured with auth plugin")
+                print("Amplify configured with Auth and Storage plugins")
             } catch {
                 print("Failed to initialize Amplify with \(error)")
             }
@@ -51,11 +57,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let session = try await Amplify.Auth.fetchAuthSession()
             print("Is user signed in - \(session.isSignedIn)")
             
+            
         } catch let error as AuthError {
             print("Fetch session failed with error \(error)")
         } catch {
             print("Unexpected error: \(error)")
         }
+        
     }
     
     

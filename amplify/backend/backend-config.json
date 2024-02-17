@@ -29,5 +29,12 @@
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
     }
+  },
+  "storage": {
+    "userVideo": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
   }
 }

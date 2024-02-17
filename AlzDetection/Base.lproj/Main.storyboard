@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VpD-yI-dc0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yzf-PV-9cy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -242,7 +242,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Begin New Test"/>
                                 <connections>
                                     <action selector="BeginTestButton:" destination="yzf-PV-9cy" eventType="touchUpInside" id="dBJ-gb-mLd"/>
-                                    <segue destination="VpD-yI-dc0" kind="presentation" modalPresentationStyle="fullScreen" id="GmF-40-Ova"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfg-k8-898">
@@ -356,7 +355,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cancel Test" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYf-wJ-dDl">
-                                <rect key="frame" x="148" y="639" width="99" height="34"/>
+                                <rect key="frame" x="148" y="605" width="99" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -365,7 +364,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xc2-Lp-kig">
-                                <rect key="frame" x="131" y="569" width="131" height="35"/>
+                                <rect key="frame" x="131" y="535" width="131" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Perform Trials"/>
                                 <connections>
@@ -373,13 +372,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igx-IY-5k6">
-                                <rect key="frame" x="132.66666666666666" y="80" width="127.66666666666666" height="30"/>
+                                <rect key="frame" x="132.66666666666666" y="139" width="127.66666666666666" height="30"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAF-JW-ghY">
-                                <rect key="frame" x="35" y="208" width="325" height="143.33333333333337"/>
+                                <rect key="frame" x="35" y="267" width="325" height="143.33333333333337"/>
                                 <string key="text">On the next screen, you will first be shown an example task. Once you confirm that you are ready, you will perform the example task that was shown to you before moving on to the next task.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -414,7 +413,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-aM-Csm">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-aM-Csm">
                                 <rect key="frame" x="133" y="274" width="127" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Record Video"/>
@@ -422,12 +421,13 @@
                                     <action selector="RecordAction:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="G8u-w3-mMp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASD-Yu-BDg">
-                                <rect key="frame" x="134" y="590" width="125" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAz-hQ-6h2">
+                                <rect key="frame" x="139" y="692" width="116" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Play Video"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Completed?"/>
                                 <connections>
-                                    <action selector="openImgVideoPicker" destination="YGt-Yq-GXd" eventType="touchUpInside" id="bmr-4g-TAr"/>
+                                    <action selector="testCompleted:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="neY-vU-fxo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -435,16 +435,70 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CH6-aM-Csm" firstAttribute="top" secondItem="bgv-rX-buB" secondAttribute="top" constant="274" id="HYt-wN-bxX"/>
-                            <constraint firstItem="ASD-Yu-BDg" firstAttribute="centerX" secondItem="CH6-aM-Csm" secondAttribute="centerX" id="V5w-4Z-kvF"/>
-                            <constraint firstItem="ASD-Yu-BDg" firstAttribute="leading" secondItem="bgv-rX-buB" secondAttribute="leading" constant="134" id="cNN-R1-JfL"/>
-                            <constraint firstItem="ASD-Yu-BDg" firstAttribute="centerX" secondItem="GXj-xh-uV4" secondAttribute="centerX" id="hUO-dx-w2M"/>
-                            <constraint firstItem="bgv-rX-buB" firstAttribute="bottom" secondItem="ASD-Yu-BDg" secondAttribute="bottom" constant="227" id="vJt-eQ-rCO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="4uV-Zh-Hc3" kind="presentation" identifier="uploadSuccess" id="uh8-sg-Jvw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPA-Mj-6r0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274.04580152671753" y="1765.4929577464789"/>
+            <point key="canvasLocation" x="-274" y="1752"/>
+        </scene>
+        <!--postTestViewController-->
+        <scene sceneID="7XX-pF-dGl">
+            <objects>
+                <viewController title="postTestViewController" id="4uV-Zh-Hc3" customClass="postTestViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWG-92-Qjd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hke-nV-d1A">
+                                <rect key="frame" x="157" y="550" width="80" height="35"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Results"/>
+                                <connections>
+                                    <action selector="viewResultsButton:" destination="4uV-Zh-Hc3" eventType="touchUpInside" id="4hk-74-OTR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHq-6I-QEg">
+                                <rect key="frame" x="143" y="702" width="108" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Main Menu"/>
+                                <connections>
+                                    <action selector="triggerMainMenuSegue:" destination="4uV-Zh-Hc3" eventType="touchUpInside" id="0ey-bY-77M"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-6G-bN2">
+                                <rect key="frame" x="16" y="78" width="361" height="268.66666666666669"/>
+                                <string key="text">Great work on completing AwareMinds audio instructed test. The video you recorded has been sent to our AI and is being evaluated! If you'd like, you can click the Green button to navigate to the Results screen, or the Blue button to navigate to the main menu.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jh5-rX-n3Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hke-nV-d1A" firstAttribute="leading" secondItem="jh5-rX-n3Q" secondAttribute="leading" constant="157" id="13l-zQ-rZf"/>
+                            <constraint firstItem="7Gw-6G-bN2" firstAttribute="leading" secondItem="jh5-rX-n3Q" secondAttribute="leading" constant="16" id="3Eg-o5-6Wc"/>
+                            <constraint firstItem="jh5-rX-n3Q" firstAttribute="trailing" secondItem="Hke-nV-d1A" secondAttribute="trailing" constant="156" id="BDk-Hi-GUQ"/>
+                            <constraint firstItem="7Gw-6G-bN2" firstAttribute="top" secondItem="jh5-rX-n3Q" secondAttribute="top" constant="78" id="DdE-un-KKG"/>
+                            <constraint firstItem="jh5-rX-n3Q" firstAttribute="bottom" secondItem="sHq-6I-QEg" secondAttribute="bottom" constant="105" id="IDh-iS-8cq"/>
+                            <constraint firstItem="jh5-rX-n3Q" firstAttribute="trailing" secondItem="sHq-6I-QEg" secondAttribute="trailing" constant="142" id="VT1-LR-ejd"/>
+                            <constraint firstItem="sHq-6I-QEg" firstAttribute="leading" secondItem="jh5-rX-n3Q" secondAttribute="leading" constant="143" id="W7n-GO-9a1"/>
+                            <constraint firstItem="jh5-rX-n3Q" firstAttribute="trailing" secondItem="7Gw-6G-bN2" secondAttribute="trailing" constant="16" id="dG9-Ug-Fxp"/>
+                            <constraint firstItem="Hke-nV-d1A" firstAttribute="top" secondItem="7Gw-6G-bN2" secondAttribute="bottom" constant="203.33000000000001" id="h13-8G-6sX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="AG0-b4-fHS" kind="presentation" identifier="resultsButton" modalPresentationStyle="fullScreen" id="cAU-ZD-QTE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5WZ-Ee-8t3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274.04580152671753" y="2437.323943661972"/>
         </scene>
         <!--Thank You Page-->
         <scene sceneID="2d7-Y0-RaR">
@@ -619,6 +673,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
