@@ -8,6 +8,9 @@
 import UIKit
 import MobileCoreServices
 import Photos
+import Amplify
+import AWSS3
+
 
 class CustomCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -74,14 +77,6 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
-  
-    //The actual button Function for choosing a video for display, calls upon other functions
-    @IBAction func openImgVideoPicker() {
-        videoAndImageReview.sourceType = .savedPhotosAlbum
-        videoAndImageReview.delegate = self
-        videoAndImageReview.mediaTypes = ["public.movie"]
-        present(videoAndImageReview, animated: true, completion: nil)
-    }
     
     //Brings up the Video review so you could scroll through or even crop your video before saving / viewing.
     func videoAndImageReview(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -91,5 +86,53 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         }
         dismiss(animated: true, completion: nil)
     }
+    
+    //If the test is completed, upload the most recent video to S3
+    @IBAction func testCompleted(_ sender: Any) {
+            
+        //Saves the video in the S3 bucket with the key "myVideo.mp4"
+        //TASK: figure out how to save multiple vidoes based on DATE under the same user
+            Task { @MainActor in
+                let dataString = "My Data"
+                let userVideoKey = "\(try await Amplify.Auth.getCurrentUser().userId).mp4"
+                guard let filename = FileManager.default.urls(
+                    for: .documentDirectory,
+                    in: .userDomainMask
+                ).first?.appendingPathComponent(userVideoKey)
+                else { return }
+                
+                try dataString.write(
+                    to: filename,
+                    atomically: true,
+                    encoding: .utf8
+                )
+                
+                let uploadTask = Amplify.Storage.uploadFile(
+                    key: userVideoKey,
+                    local: videoURL!
+                )
+                
+                Task {
+                    for await progress in await uploadTask.progress {
+                        print("Progress: \(progress)")
+                    }
+                }
+                //If upload is successful THEN performsegue to signify upload completion for the user.
+                let data = try await uploadTask.value
+                print("Upload Completed: \(data)")
+                performSegue(withIdentifier: "uploadSuccess", sender: self)
+                
+            }
+        }
+    
+    
+    
 }
+
+
+
+    
+
+
+
 

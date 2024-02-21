@@ -15,6 +15,9 @@
       "auth": {
         "AlzheimersDetectionAppTempName": {},
         "AwareMind": {}
+      },
+      "storage": {
+        "userVideo": {}
       }
     }
   }
