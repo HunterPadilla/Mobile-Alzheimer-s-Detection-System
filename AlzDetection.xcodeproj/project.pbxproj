@@ -25,6 +25,8 @@
 		32A231202B79560B00DEE7E2 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 32A2311F2B79560B00DEE7E2 /* AWSS3StoragePlugin */; };
 		32A231222B79560B00DEE7E2 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 32A231212B79560B00DEE7E2 /* Amplify */; };
 		32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C95C242B4F7F1700DC358D /* LoginViewController.swift */; };
+		32FBB9DC2B869DDB004D7E02 /* gifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FBB9DB2B869DDB004D7E02 /* gifLoader.swift */; };
+		32FBB9DE2B86A0F7004D7E02 /* loadingGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32FBB9DD2B86A0F7004D7E02 /* loadingGif.gif */; };
 		4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */; };
 		4B849BEB2B5C2B4200B6A506 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */; };
 		4B849BED2B5C2C1D00B6A506 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */; };
@@ -69,6 +71,8 @@
 		3283DF1B2B63157800084997 /* CustomCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		32A231132B793B7800DEE7E2 /* postTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postTestViewController.swift; sourceTree = "<group>"; };
 		32C95C242B4F7F1700DC358D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		32FBB9DB2B869DDB004D7E02 /* gifLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifLoader.swift; sourceTree = "<group>"; };
+		32FBB9DD2B86A0F7004D7E02 /* loadingGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loadingGif.gif; path = Assets.xcassets/loadingGif.dataset/loadingGif.gif; sourceTree = "<group>"; };
 		4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				4B849BEE2B5C2CC900B6A506 /* ClinicianViewController.swift */,
 				4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */,
 				325ADD812B4C6A0100000428 /* Assets.xcassets */,
+				32FBB9DD2B86A0F7004D7E02 /* loadingGif.gif */,
+				32FBB9DB2B869DDB004D7E02 /* gifLoader.swift */,
 				325ADD862B4C6A0100000428 /* Info.plist */,
 				3283DF1B2B63157800084997 /* CustomCameraController.swift */,
 				32A231132B793B7800DEE7E2 /* postTestViewController.swift */,
@@ -304,6 +310,7 @@
 				325ADD822B4C6A0100000428 /* Assets.xcassets in Resources */,
 				325ADD802B4C6A0000000428 /* Main.storyboard in Resources */,
 				758966E5F3EA2ADED0D3A50D /* awsconfiguration.json in Resources */,
+				32FBB9DE2B86A0F7004D7E02 /* loadingGif.gif in Resources */,
 				7B39E01C60F48E9BF194595B /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +344,7 @@
 				3283DF1C2B63157800084997 /* CustomCameraController.swift in Sources */,
 				4B849BEF2B5C2CC900B6A506 /* ClinicianViewController.swift in Sources */,
 				4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */,
+				32FBB9DC2B869DDB004D7E02 /* gifLoader.swift in Sources */,
 				4B849BED2B5C2C1D00B6A506 /* ResultsViewController.swift in Sources */,
 				325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */,
 				4B849BEB2B5C2B4200B6A506 /* InstructionsViewController.swift in Sources */,
