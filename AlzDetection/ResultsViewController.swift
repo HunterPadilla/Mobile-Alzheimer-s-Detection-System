@@ -15,11 +15,4 @@ class ResultsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func MainMenuButton() {
-        guard let MainMenu = storyboard? .instantiateViewController(withIdentifier: "MainMenu") as? HomeViewController else {
-            return
-        }
-        present(MainMenu, animated: true)
-    }
-
 }

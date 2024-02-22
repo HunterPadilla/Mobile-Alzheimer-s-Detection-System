@@ -11,7 +11,7 @@ import AWSCognitoAuthPlugin
 import UIKit
 import SwiftUI
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var UsernameTextField: UITextField!
     
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -56,8 +56,24 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
+    //The following functions disbale the keyboard when using a mobile simulator
+    //done by either tapping return, or tapping on teh screen where the keyboard isnt covering
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //These two lines are needed to disable the keyboard on Mobile phone for testing
+        //Note that UITextFieldDelegate is also added to the class for this functionality
+        self.UsernameTextField.delegate = self
+        self.PasswordTextField.delegate = self
 
     }
     
