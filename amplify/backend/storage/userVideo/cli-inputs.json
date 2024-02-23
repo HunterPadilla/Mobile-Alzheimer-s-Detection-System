@@ -4,8 +4,8 @@
   "bucketName": "awareminduservide",
   "storageAccess": "authAndGuest",
   "guestAccess": [
-    "READ",
     "CREATE_AND_UPDATE",
+    "READ",
     "DELETE"
   ],
   "authAccess": [
@@ -13,6 +13,5 @@
     "READ",
     "DELETE"
   ],
-  "triggerFunction": "NONE",
   "groupAccess": {}
 }

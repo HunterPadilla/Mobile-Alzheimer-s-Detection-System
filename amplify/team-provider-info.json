@@ -20,5 +20,26 @@
         "userVideo": {}
       }
     }
+  },
+  "demo": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awaremind-demo-203318-authRole",
+      "UnauthRoleArn": "arn:aws:iam::298516394167:role/amplify-awaremind-demo-203318-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::298516394167:role/amplify-awaremind-demo-203318-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-awaremind-demo-203318-deployment",
+      "UnauthRoleName": "amplify-awaremind-demo-203318-unauthRole",
+      "StackName": "amplify-awaremind-demo-203318",
+      "StackId": "arn:aws:cloudformation:us-east-2:298516394167:stack/amplify-awaremind-demo-203318/8671aaa0-d1eb-11ee-9194-026e7b02f0ad",
+      "AmplifyAppId": "d2q0l8oj41ms6z"
+    },
+    "categories": {
+      "auth": {
+        "AwareMind": {}
+      },
+      "storage": {
+        "userVideo": {}
+      }
+    }
   }
 }
