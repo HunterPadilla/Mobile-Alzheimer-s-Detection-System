@@ -9,17 +9,21 @@ import UIKit
 
 class InstructionsViewController: UIViewController {
 
+    
+    @IBAction func cancelTestButton(_ sender: Any) {
+        performSegue(withIdentifier: "instructionsCancel", sender: self)
+    }
+    
+    @IBAction func beginTestButton(_ sender: Any) {
+        performSegue(withIdentifier: "instructionsConfirm", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func MainMenuButton() {
-        guard let MainMenu = storyboard? .instantiateViewController(withIdentifier: "MainMenu") as? HomeViewController else {
-            return
-        }
-        present(MainMenu, animated: true)
-    }
 
 }

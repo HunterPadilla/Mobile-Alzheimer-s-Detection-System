@@ -27,8 +27,8 @@ class HomeViewController: UIViewController {
             switch signOutResult {
             case .complete:
                 // Sign Out completed fully and without errors.
-                print("Signed out successfully")
-                self.dismiss(animated: true)
+                performSegue(withIdentifier: "signOutSegue", sender: self)
+               
                 
             case let .partial(revokeTokenError, globalSignOutError, hostedUIError):
                 // Sign Out completed with some errors. User is signed out of the device.
@@ -59,22 +59,6 @@ class HomeViewController: UIViewController {
     }
             
             
-            
-            
-    @IBAction func BeginTestButton(_ sender: Any) {
-        guard let InstructionsPage = storyboard? .instantiateViewController(withIdentifier: "Instructions") as? InstructionsViewController else {
-            return
-        }
-        present(InstructionsPage, animated: true)
-    }
-    
-    
-    @IBAction func ViewResultsButton(_ sender: Any) {
-        guard let ResultsPage = storyboard? .instantiateViewController(withIdentifier: "Results") as? ResultsViewController else {
-            return
-        }
-        present(ResultsPage, animated: true)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
