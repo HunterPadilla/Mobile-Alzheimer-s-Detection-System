@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yzf-PV-9cy">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -424,7 +424,7 @@
                             <constraint firstItem="igx-IY-5k6" firstAttribute="top" secondItem="2Ei-8o-YkE" secondAttribute="top" constant="80" id="7Pw-dn-TnF"/>
                             <constraint firstItem="Xc2-Lp-kig" firstAttribute="leading" secondItem="2Ei-8o-YkE" secondAttribute="leading" constant="148" id="HKl-IL-a9k"/>
                             <constraint firstItem="Xc2-Lp-kig" firstAttribute="centerX" secondItem="ETI-M9-u5Q" secondAttribute="centerX" constant="-1.5" id="IlG-Ng-gYv"/>
-                            <constraint firstItem="2Ei-8o-YkE" firstAttribute="bottom" secondItem="ETI-M9-u5Q" secondAttribute="bottom" constant="37" id="MJf-Vy-Bfc"/>
+                            <constraint firstItem="2Ei-8o-YkE" firstAttribute="bottom" secondItem="ETI-M9-u5Q" secondAttribute="bottom" constant="71" id="MJf-Vy-Bfc"/>
                             <constraint firstItem="igx-IY-5k6" firstAttribute="centerX" secondItem="yAF-JW-ghY" secondAttribute="centerX" constant="-1" id="MWl-26-LdQ"/>
                             <constraint firstItem="igx-IY-5k6" firstAttribute="centerX" secondItem="VDt-ez-zeM" secondAttribute="centerX" id="ex7-LN-UnY"/>
                         </constraints>
@@ -462,7 +462,7 @@
                                     <constraint firstAttribute="height" constant="97" id="jOK-Fa-jM2"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Record Video"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Record Task: "/>
                                 <connections>
                                     <action selector="RecordAction:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="G8u-w3-mMp"/>
                                 </connections>
@@ -495,11 +495,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hke-nV-d1A">
-                                <rect key="frame" x="152" y="518" width="127" height="97"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-6G-bN2">
+                                <rect key="frame" x="16" y="78" width="398" height="313"/>
+                                <string key="text">Great work on completing AwareMinds audio instructed test. The video you recorded has been sent to our AI and is being evaluated! </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHq-6I-QEg">
+                                <rect key="frame" x="152" y="736" width="127" height="97"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="127" id="PPc-oq-TJx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="J6L-AH-vFL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="UL4-mh-tDI"/>
+                                    <constraint firstAttribute="height" constant="97" id="hHa-yP-bKS"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="97" id="xwG-oV-ffi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Main Menu"/>
+                                <connections>
+                                    <action selector="triggerMainMenuSegue:" destination="4uV-Zh-Hc3" eventType="touchUpInside" id="0ey-bY-77M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hke-nV-d1A">
+                                <rect key="frame" x="152" y="571" width="127" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="2OP-Ln-RXU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="PPc-oq-TJx"/>
                                     <constraint firstAttribute="height" constant="97" id="Tpg-AL-7wT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="97" id="c8H-qv-4lZ"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
@@ -508,32 +531,13 @@
                                     <action selector="viewResultsButton:" destination="4uV-Zh-Hc3" eventType="touchUpInside" id="4hk-74-OTR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-6G-bN2">
-                                <rect key="frame" x="16" y="78" width="398" height="239"/>
-                                <string key="text">Great work on completing AwareMinds audio instructed test. The video you recorded has been sent to our AI and is being evaluated! If you'd like, you can click the Green button to navigate to the Results screen, or the Blue button to navigate to the main menu.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHq-6I-QEg">
-                                <rect key="frame" x="152" y="736" width="127" height="97"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="127" id="J6L-AH-vFL"/>
-                                    <constraint firstAttribute="height" constant="97" id="hHa-yP-bKS"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Main Menu"/>
-                                <connections>
-                                    <action selector="triggerMainMenuSegue:" destination="4uV-Zh-Hc3" eventType="touchUpInside" id="0ey-bY-77M"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jh5-rX-n3Q"/>
                         <color key="backgroundColor" red="0.4352940917" green="0.7607843876" blue="0.98039215800000001" alpha="0.77007450330000005" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="Hke-nV-d1A" firstAttribute="leading" secondItem="jh5-rX-n3Q" secondAttribute="leading" constant="152" id="13l-zQ-rZf"/>
-                            <constraint firstItem="sHq-6I-QEg" firstAttribute="top" secondItem="Hke-nV-d1A" secondAttribute="bottom" constant="121" id="2X9-dI-IcM"/>
+                            <constraint firstItem="sHq-6I-QEg" firstAttribute="top" secondItem="Hke-nV-d1A" secondAttribute="bottom" constant="68" id="2X9-dI-IcM"/>
                             <constraint firstItem="7Gw-6G-bN2" firstAttribute="leading" secondItem="jh5-rX-n3Q" secondAttribute="leading" constant="16" id="3Eg-o5-6Wc"/>
                             <constraint firstItem="jh5-rX-n3Q" firstAttribute="trailing" secondItem="Hke-nV-d1A" secondAttribute="trailing" constant="151" id="BDk-Hi-GUQ"/>
                             <constraint firstItem="7Gw-6G-bN2" firstAttribute="top" secondItem="jh5-rX-n3Q" secondAttribute="top" constant="78" id="DdE-un-KKG"/>
@@ -541,7 +545,7 @@
                             <constraint firstItem="jh5-rX-n3Q" firstAttribute="trailing" secondItem="sHq-6I-QEg" secondAttribute="trailing" constant="151" id="VT1-LR-ejd"/>
                             <constraint firstItem="sHq-6I-QEg" firstAttribute="leading" secondItem="jh5-rX-n3Q" secondAttribute="leading" constant="152" id="W7n-GO-9a1"/>
                             <constraint firstItem="jh5-rX-n3Q" firstAttribute="trailing" secondItem="7Gw-6G-bN2" secondAttribute="trailing" constant="16" id="dG9-Ug-Fxp"/>
-                            <constraint firstItem="Hke-nV-d1A" firstAttribute="top" secondItem="7Gw-6G-bN2" secondAttribute="bottom" constant="201" id="h13-8G-6sX"/>
+                            <constraint firstItem="Hke-nV-d1A" firstAttribute="top" secondItem="7Gw-6G-bN2" secondAttribute="bottom" constant="180" id="h13-8G-6sX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -715,8 +719,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cAU-ZD-QTE"/>
-        <segue reference="DJN-DC-Fw1"/>
+        <segue reference="bfp-PV-GR2"/>
+        <segue reference="e87-96-N1C"/>
         <segue reference="Jpo-JX-TjB"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -728,10 +732,10 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

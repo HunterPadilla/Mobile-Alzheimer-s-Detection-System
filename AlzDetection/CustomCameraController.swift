@@ -12,11 +12,13 @@ import Amplify
 import AWSS3
 
 
+
 class CustomCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //Creates the video as a URL
     var videoAndImageReview = UIImagePickerController()
     var videoURL: URL?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,6 +126,7 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
                 
             }
         }
+    
     
     
     
