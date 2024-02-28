@@ -19,7 +19,25 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
     var videoAndImageReview = UIImagePickerController()
     var videoURL: URL?
     
-
+    //Code to enable TTS, Import AVFoundation and copy paste where needed
+    let synthesizer = AVSpeechSynthesizer()
+    
+    func readTextAloud(){
+        
+        //Complete the String with whatever you want to say.
+        let utterance = AVSpeechUtterance(string: "To prepare for task #1, please step three to five feet away from your phone at an angle where your camera can see you. Press record button to start, and return to your desired testing position.")
+        
+        //Language Settings for TTS
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        
+        //Speed of TTS (0.4 is just slightly slower than normal talking speed)
+        utterance.rate = 0.4
+        
+        //Begins the TTS
+        synthesizer.speak(utterance)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,6 +52,7 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
             imagePicker.mediaTypes = [kUTTypeMovie as String]
             imagePicker.allowsEditing = true
             present(imagePicker, animated: true, completion: nil)
+            readTextAloud()
         } else {
             print("Camera Unavailable")
         }
