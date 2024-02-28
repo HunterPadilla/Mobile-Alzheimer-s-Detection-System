@@ -533,7 +533,10 @@
 				DEVELOPMENT_TEAM = 2435XT3Q88;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzDetection/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This application may require the usage of your front/back facing camera in order to record movement data. Is this okay?";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please work";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please Work";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save to Library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -544,7 +547,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -562,7 +565,10 @@
 				DEVELOPMENT_TEAM = 2435XT3Q88;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzDetection/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This application may require the usage of your front/back facing camera in order to record movement data. Is this okay?";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please work";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please Work";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save to Library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -573,7 +579,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
