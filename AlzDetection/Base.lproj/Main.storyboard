@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yzf-PV-9cy">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -330,6 +330,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.4352940917" green="0.7607843876" blue="0.98039215800000001" alpha="0.77000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <segue destination="FR9-UX-hyl" kind="presentation" modalPresentationStyle="fullScreen" id="umd-Do-ccy"/>
                                         </connections>
@@ -364,6 +365,9 @@
                             <constraint firstItem="SV0-0Z-IeC" firstAttribute="leading" secondItem="6gr-dr-hfy" secondAttribute="leading" constant="124" id="vpN-ug-7Ji"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Table" destination="2Y5-Pe-xTc" id="71A-3K-mDZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPq-NJ-PCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -715,8 +719,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cAU-ZD-QTE"/>
-        <segue reference="DJN-DC-Fw1"/>
+        <segue reference="umd-Do-ccy"/>
+        <segue reference="Ydm-6E-b02"/>
+        <segue reference="Uhi-uJ-LOo"/>
         <segue reference="Jpo-JX-TjB"/>
     </inferredMetricsTieBreakers>
     <resources>
