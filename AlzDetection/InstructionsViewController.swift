@@ -11,7 +11,7 @@ import AVFoundation
 class InstructionsViewController: UIViewController {
     
     //Code to enable TTS, Import AVFoundation and copy paste where needed
-    let synthesizer = AVSpeechSynthesizer()
+    var synthesizer = AVSpeechSynthesizer()
     
     func readTextAloud(){
         

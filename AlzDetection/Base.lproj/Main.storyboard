@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YGt-Yq-GXd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VpD-yI-dc0">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -386,7 +386,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Perform Trials"/>
                                 <connections>
                                     <action selector="beginTestButton:" destination="VpD-yI-dc0" eventType="touchUpInside" id="ych-Wt-B4O"/>
-                                    <segue destination="YGt-Yq-GXd" kind="presentation" identifier="instructionsConfirm" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="A9P-VR-bbJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igx-IY-5k6">
@@ -431,6 +430,7 @@
                     </view>
                     <connections>
                         <segue destination="yzf-PV-9cy" kind="presentation" identifier="instructionsCancel" modalPresentationStyle="fullScreen" id="3hC-GT-GIW"/>
+                        <segue destination="YGt-Yq-GXd" kind="presentation" identifier="instructionsConfirm" modalPresentationStyle="fullScreen" id="vLM-Cy-Ue4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKl-4N-8lg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -445,17 +445,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAz-hQ-6h2">
-                                <rect key="frame" x="151" y="692" width="127" height="97"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="97" id="Xqx-LN-kbb"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Submit Video"/>
-                                <connections>
-                                    <action selector="testCompleted:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="neY-vU-fxo"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-aM-Csm">
                                 <rect key="frame" x="152" y="274" width="127" height="97"/>
                                 <constraints>
@@ -464,9 +453,25 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Record Task: "/>
                                 <connections>
-                                    <action selector="RecordAction:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="G8u-w3-mMp"/>
+                                    <action selector="RecordAction:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="keq-ma-TsS"/>
+                                    <action selector="startRecordingButton:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="thH-xI-vPJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAz-hQ-6h2">
+                                <rect key="frame" x="151" y="692" width="127" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="Xqx-LN-kbb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit Video"/>
+                                <connections>
+                                    <action selector="testCompleted:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="uC8-7O-nyJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kT-dB-eFz">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bgv-rX-buB"/>
                         <color key="backgroundColor" red="0.4352940917" green="0.7607843876" blue="0.98039215800000001" alpha="0.77007450330000005" colorSpace="custom" customColorSpace="displayP3"/>
@@ -480,6 +485,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraView" destination="GXj-xh-uV4" id="8Xp-73-2sT"/>
+                        <outlet property="overlayView" destination="0kT-dB-eFz" id="odX-op-3RI"/>
                         <segue destination="4uV-Zh-Hc3" kind="presentation" identifier="uploadSuccess" modalPresentationStyle="fullScreen" id="uh8-sg-Jvw"/>
                     </connections>
                 </viewController>
@@ -719,23 +726,23 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bfp-PV-GR2"/>
+        <segue reference="cAU-ZD-QTE"/>
         <segue reference="3hC-GT-GIW"/>
         <segue reference="Jpo-JX-TjB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="signpost.left" width="11" height="11"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34901960784313724" green="0.4392156862745098" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
