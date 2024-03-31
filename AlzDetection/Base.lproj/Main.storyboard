@@ -337,9 +337,9 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zed-r7-W75">
-                                                    <rect key="frame" x="114" y="29" width="96" height="43"/>
+                                                    <rect key="frame" x="97" y="26" width="243" height="43"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="96" id="tSZ-Xq-bqd"/>
+                                                        <constraint firstAttribute="width" constant="243" id="tSZ-Xq-bqd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
@@ -350,16 +350,15 @@
                                             <constraints>
                                                 <constraint firstItem="lBo-Gu-9bP" firstAttribute="top" secondItem="WLj-Ws-LXy" secondAttribute="topMargin" constant="-1" id="68W-JD-CGr"/>
                                                 <constraint firstItem="lBo-Gu-9bP" firstAttribute="leading" secondItem="WLj-Ws-LXy" secondAttribute="leadingMargin" constant="-10" id="JkA-eh-eg5"/>
-                                                <constraint firstItem="zed-r7-W75" firstAttribute="leading" secondItem="lBo-Gu-9bP" secondAttribute="trailing" constant="39" id="Kl0-hy-dIk"/>
+                                                <constraint firstItem="zed-r7-W75" firstAttribute="leading" secondItem="lBo-Gu-9bP" secondAttribute="trailing" constant="22" id="Kl0-hy-dIk"/>
                                                 <constraint firstItem="lBo-Gu-9bP" firstAttribute="centerY" secondItem="WLj-Ws-LXy" secondAttribute="centerY" constant="-2.5" id="ooh-xN-Zw3"/>
-                                                <constraint firstItem="zed-r7-W75" firstAttribute="top" secondItem="WLj-Ws-LXy" secondAttribute="topMargin" constant="18" id="zdM-xH-U2z"/>
-                                                <constraint firstItem="lBo-Gu-9bP" firstAttribute="centerY" secondItem="zed-r7-W75" secondAttribute="centerY" constant="-3" id="zdd-gy-qA2"/>
+                                                <constraint firstItem="zed-r7-W75" firstAttribute="top" secondItem="WLj-Ws-LXy" secondAttribute="topMargin" constant="15" id="zdM-xH-U2z"/>
+                                                <constraint firstItem="lBo-Gu-9bP" firstAttribute="centerY" secondItem="zed-r7-W75" secondAttribute="centerY" id="zdd-gy-qA2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="iconImageView" destination="lBo-Gu-9bP" id="NDG-rb-bgi"/>
                                             <outlet property="label" destination="zed-r7-W75" id="IgH-Ko-Bd8"/>
-                                            <segue destination="FR9-UX-hyl" kind="presentation" modalPresentationStyle="fullScreen" id="umd-Do-ccy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -397,6 +396,7 @@
                     </view>
                     <connections>
                         <outlet property="Table" destination="2Y5-Pe-xTc" id="zTZ-Dt-7su"/>
+                        <segue destination="FR9-UX-hyl" kind="presentation" identifier="showClinician" id="vx2-Tu-xD8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPq-NJ-PCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -637,7 +637,7 @@
             <objects>
                 <viewController storyboardIdentifier="ClinicianInfo" title="Clinician Information" id="FR9-UX-hyl" customClass="ClinicianViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4is-lh-ucP">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CfC-bU-ciP">
@@ -651,15 +651,15 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAv-Nk-4IC">
-                                <rect key="frame" x="153" y="716.66666666666663" width="124" height="35"/>
+                                <rect key="frame" x="153" y="706.66666666666663" width="124" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Send Results"/>
                                 <connections>
-                                    <action selector="SendResultsWith_sender:" destination="FR9-UX-hyl" eventType="touchUpInside" id="Pej-Pk-bmt"/>
+                                    <action selector="SendResultsWith_sender:" destination="FR9-UX-hyl" eventType="touchUpInside" id="Wwf-2Y-R1Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFR-iD-clB">
-                                <rect key="frame" x="126" y="801.66666666666663" width="178" height="34.333333333333371"/>
+                                <rect key="frame" x="126" y="791.66666666666663" width="178" height="34.333333333333371"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Back to Results">
@@ -753,7 +753,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Ydm-6E-b02"/>
-        <segue reference="NDe-wU-hqF"/>
+        <segue reference="Uhi-uJ-LOo"/>
         <segue reference="Jpo-JX-TjB"/>
     </inferredMetricsTieBreakers>
     <resources>

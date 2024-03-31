@@ -13,7 +13,7 @@ import AWSS3StoragePlugin
 
 class ClinicianViewController: UIViewController, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
-    
+    var selectedItemKey: String = ""
     
     @IBOutlet weak var ClinicianEmail: UITextField!
     
@@ -56,7 +56,7 @@ class ClinicianViewController: UIViewController, MFMailComposeViewControllerDele
         Task { @MainActor in
             do {
                 let url = try await Amplify.Storage.getURL(
-                    key: "510b2500-1031-7016-3c45-42f3a4c4f0ed.mp4",
+                    key: selectedItemKey,
                     options: .init(pluginOptions: AWSStorageGetURLOptions(validateObjectExistence: true)
                                   )
                 )

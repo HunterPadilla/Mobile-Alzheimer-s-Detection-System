@@ -10,7 +10,7 @@ import Amplify
 import AWSS3
 
 class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-        
+    weak var clinicianViewController: ClinicianViewController?
     @IBOutlet weak var Table: UITableView!
     @IBAction func MainMenuButton() {
         guard let MainMenu = storyboard? .instantiateViewController(withIdentifier: "MainMenu") as? HomeViewController else {
@@ -24,15 +24,11 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     struct Results {
         let title: String
         let imageName: String
+        let key: String
     }
+    var storageItems = [Results]()
     var listResult : [StorageListResult?] = []
-    let trialList : [Results] = [
-        Results(title: "Trial 1", imageName: "AppIcon"),
-        Results(title: "Trial 2", imageName: "AppIcon"),
-        Results(title: "Trial 3", imageName: "AppIcon"),
-        Results(title: "Trial 4", imageName: "AppIcon"),
-        Results(title: "Trial 5", imageName: "AppIcon")
-    ]
+    var itemSelected: ((String) -> Void)?
     var testList = [String]()
     
     
@@ -53,15 +49,34 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             testList.removeFirst(1)
             dump(testList)
+            updateTable()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showClinician",
+           let clinicianVC = segue.destination as? ClinicianViewController,
+           let selectedItemKey = sender as? String {
+            clinicianVC.selectedItemKey = selectedItemKey
+        }
+    }
+
+    
+    func updateTable() {
+        storageItems = testList.map {key in
+            Results(title: key, imageName: "AppIcon", key: key)
+        }
+        DispatchQueue.main.async {
+            self.Table.reloadData()
         }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trialList.count
+        return storageItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let Results = trialList[indexPath.row]
+        let Results = storageItems[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! TableViewCell
 
         cell.label.text = Results.title
@@ -73,5 +88,11 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.iconImageView.clipsToBounds = true
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItemKey = storageItems[indexPath.row].key
+        itemSelected?(selectedItemKey)
+        performSegue(withIdentifier: "showClinician", sender: selectedItemKey)
     }
 }
