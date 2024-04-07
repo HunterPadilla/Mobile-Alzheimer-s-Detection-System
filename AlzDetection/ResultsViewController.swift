@@ -64,8 +64,8 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     
     func updateTable() {
-        storageItems = testList.map {key in
-            Results(title: key, imageName: "AppIcon", key: key)
+        storageItems = testList.enumerated().map {index, key in
+            Results(title: "Trial #\(index + 1)", imageName: "AppIcon", key: key)
         }
         DispatchQueue.main.async {
             self.Table.reloadData()
