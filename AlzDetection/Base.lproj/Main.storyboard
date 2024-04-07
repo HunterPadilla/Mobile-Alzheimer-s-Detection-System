@@ -316,7 +316,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Y5-Pe-xTc">
-                                <rect key="frame" x="35" y="176" width="360" height="587"/>
+                                <rect key="frame" x="35" y="176" width="360" height="583.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -370,9 +370,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SV0-0Z-IeC">
-                                <rect key="frame" x="124" y="795" width="183" height="35"/>
+                                <rect key="frame" x="112" y="780" width="208" height="59"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Return to Main Menu"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Return to Main Menu" buttonSize="large">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="MainMenuButton" destination="AG0-b4-fHS" eventType="touchUpInside" id="IIa-FA-63G"/>
                                     <segue destination="yzf-PV-9cy" kind="presentation" modalPresentationStyle="fullScreen" id="Uhi-uJ-LOo"/>
@@ -383,15 +385,15 @@
                         <color key="backgroundColor" red="0.4352940917" green="0.7607843876" blue="0.98039215800000001" alpha="0.77007450330000005" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="2Y5-Pe-xTc" firstAttribute="leading" secondItem="6gr-dr-hfy" secondAttribute="leading" constant="35" id="4XD-C3-XeG"/>
-                            <constraint firstItem="6gr-dr-hfy" firstAttribute="bottom" secondItem="SV0-0Z-IeC" secondAttribute="bottom" constant="102" id="D19-59-L7p"/>
-                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="centerX" secondItem="SV0-0Z-IeC" secondAttribute="centerX" id="FYz-H6-lhx"/>
-                            <constraint firstItem="SV0-0Z-IeC" firstAttribute="leading" secondItem="6gr-dr-hfy" secondAttribute="leading" constant="124" id="aES-dO-Ldg"/>
+                            <constraint firstItem="6gr-dr-hfy" firstAttribute="bottom" secondItem="SV0-0Z-IeC" secondAttribute="bottom" constant="93" id="D19-59-L7p"/>
+                            <constraint firstItem="2Y5-Pe-xTc" firstAttribute="centerX" secondItem="SV0-0Z-IeC" secondAttribute="centerX" constant="-1" id="FYz-H6-lhx"/>
+                            <constraint firstItem="SV0-0Z-IeC" firstAttribute="leading" secondItem="6gr-dr-hfy" secondAttribute="leading" constant="112" id="aES-dO-Ldg"/>
                             <constraint firstItem="GvA-cd-7A2" firstAttribute="top" secondItem="6gr-dr-hfy" secondAttribute="top" constant="108" id="dvF-J8-hI8"/>
                             <constraint firstItem="GvA-cd-7A2" firstAttribute="centerX" secondItem="saX-50-faS" secondAttribute="centerX" id="jMV-SN-BbL"/>
                             <constraint firstItem="GvA-cd-7A2" firstAttribute="centerX" secondItem="2Y5-Pe-xTc" secondAttribute="centerX" id="rea-QQ-Bjq"/>
                             <constraint firstItem="GvA-cd-7A2" firstAttribute="leading" secondItem="6gr-dr-hfy" secondAttribute="leading" constant="109.66666666666669" id="rwv-3l-Lbe"/>
                             <constraint firstItem="2Y5-Pe-xTc" firstAttribute="top" secondItem="GvA-cd-7A2" secondAttribute="bottom" constant="38" id="sLV-4L-RCc"/>
-                            <constraint firstItem="SV0-0Z-IeC" firstAttribute="top" secondItem="2Y5-Pe-xTc" secondAttribute="bottom" constant="32" id="wtp-83-A68"/>
+                            <constraint firstItem="SV0-0Z-IeC" firstAttribute="top" secondItem="2Y5-Pe-xTc" secondAttribute="bottom" constant="27.666666666666629" id="wtp-83-A68"/>
                         </constraints>
                     </view>
                     <connections>
@@ -640,36 +642,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CfC-bU-ciP">
-                                <rect key="frame" x="96" y="332" width="238" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c8j-s5-7Uv">
-                                <rect key="frame" x="96" y="412" width="238" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAv-Nk-4IC">
-                                <rect key="frame" x="153" y="706.66666666666663" width="124" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Send Results"/>
-                                <connections>
-                                    <action selector="SendResultsWith_sender:" destination="FR9-UX-hyl" eventType="touchUpInside" id="Wwf-2Y-R1Y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFR-iD-clB">
-                                <rect key="frame" x="126" y="791.66666666666663" width="178" height="34.333333333333371"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Back to Results">
-                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ViewResultsButton:" destination="FR9-UX-hyl" eventType="touchUpInside" id="29A-k0-Ap2"/>
-                                    <segue destination="AG0-b4-fHS" kind="presentation" modalPresentationStyle="fullScreen" id="Ydm-6E-b02"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter Clinician Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fES-Ac-AHU">
                                 <rect key="frame" x="38" y="154" width="354" height="97"/>
                                 <constraints>
@@ -679,34 +651,63 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFR-iD-clB">
+                                <rect key="frame" x="118" y="740.33333333333337" width="194" height="51.666666666666629"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Back to Results" buttonSize="large">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ViewResultsButton:" destination="FR9-UX-hyl" eventType="touchUpInside" id="29A-k0-Ap2"/>
+                                    <segue destination="AG0-b4-fHS" kind="presentation" modalPresentationStyle="fullScreen" id="Ydm-6E-b02"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Clinician Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ip-VX-A4i">
+                                <rect key="frame" x="90" y="393" width="250" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAv-Nk-4IC">
+                                <rect key="frame" x="140" y="654" width="150" height="47"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Send Results" buttonSize="large">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="SendResultsWith_sender:" destination="FR9-UX-hyl" eventType="touchUpInside" id="Wwf-2Y-R1Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tDf-ig-96T"/>
                         <color key="backgroundColor" red="0.4352940917" green="0.7607843876" blue="0.98039215800000001" alpha="0.77000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="c8j-s5-7Uv" firstAttribute="top" secondItem="CfC-bU-ciP" secondAttribute="bottom" constant="46" id="3Y9-Rw-Qtw"/>
-                            <constraint firstItem="tDf-ig-96T" firstAttribute="bottom" secondItem="wFR-iD-clB" secondAttribute="bottom" constant="96" id="4lX-Ln-jhh"/>
-                            <constraint firstItem="CfC-bU-ciP" firstAttribute="top" secondItem="fES-Ac-AHU" secondAttribute="bottom" constant="81" id="8gx-B7-SDj"/>
-                            <constraint firstItem="c8j-s5-7Uv" firstAttribute="leading" secondItem="tDf-ig-96T" secondAttribute="leading" constant="96" id="Dr8-Bb-aAV"/>
-                            <constraint firstItem="c8j-s5-7Uv" firstAttribute="leading" secondItem="CfC-bU-ciP" secondAttribute="leading" id="F9W-i1-0jS"/>
+                            <constraint firstItem="tDf-ig-96T" firstAttribute="bottom" secondItem="wFR-iD-clB" secondAttribute="bottom" constant="130" id="4lX-Ln-jhh"/>
                             <constraint firstItem="fES-Ac-AHU" firstAttribute="centerX" secondItem="SAv-Nk-4IC" secondAttribute="centerX" id="JZ5-VG-SGB"/>
-                            <constraint firstItem="fES-Ac-AHU" firstAttribute="centerX" secondItem="c8j-s5-7Uv" secondAttribute="centerX" id="Nqf-mW-Ahh"/>
                             <constraint firstItem="fES-Ac-AHU" firstAttribute="centerX" secondItem="4is-lh-ucP" secondAttribute="centerX" id="TRL-Zf-Pkb"/>
                             <constraint firstItem="fES-Ac-AHU" firstAttribute="leading" secondItem="tDf-ig-96T" secondAttribute="leading" constant="38" id="WMD-fl-J1o"/>
-                            <constraint firstItem="fES-Ac-AHU" firstAttribute="centerX" secondItem="CfC-bU-ciP" secondAttribute="centerX" id="cIX-Rj-Lfw"/>
-                            <constraint firstItem="wFR-iD-clB" firstAttribute="leading" secondItem="tDf-ig-96T" secondAttribute="leading" constant="126" id="flC-Bw-byd"/>
+                            <constraint firstItem="wFR-iD-clB" firstAttribute="leading" secondItem="tDf-ig-96T" secondAttribute="leading" constant="118" id="flC-Bw-byd"/>
                             <constraint firstItem="fES-Ac-AHU" firstAttribute="top" secondItem="tDf-ig-96T" secondAttribute="top" constant="154" id="rtL-Or-OuP"/>
                             <constraint firstItem="fES-Ac-AHU" firstAttribute="centerX" secondItem="wFR-iD-clB" secondAttribute="centerX" id="uPm-bn-zJU"/>
-                            <constraint firstItem="wFR-iD-clB" firstAttribute="top" secondItem="SAv-Nk-4IC" secondAttribute="bottom" constant="50" id="vne-1s-kj9"/>
+                            <constraint firstItem="wFR-iD-clB" firstAttribute="top" secondItem="SAv-Nk-4IC" secondAttribute="bottom" constant="46" id="vne-1s-kj9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ClinicianEmail" destination="CfC-bU-ciP" id="kAZ-IX-xe6"/>
-                        <outlet property="ClinicianPhone" destination="c8j-s5-7Uv" id="MMv-zo-cxQ"/>
+                        <outlet property="ClinicianEmail" destination="6ip-VX-A4i" id="qM4-5C-8Z8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QrN-yw-1oO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373" y="1836"/>
+            <point key="canvasLocation" x="1371.6279069767443" y="1835.4077253218886"/>
         </scene>
         <!--Results Sent-->
         <scene sceneID="i1D-14-rjQ">
@@ -717,9 +718,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCE-Vr-59g">
-                                <rect key="frame" x="114.66666666666669" y="612" width="201" height="35"/>
+                                <rect key="frame" x="102" y="595.33333333333337" width="226" height="51.666666666666629"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continue to Main Menu"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue to Main Menu" buttonSize="large">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="MainMenuButton" destination="k17-Uv-L9R" eventType="touchUpInside" id="jWl-Qd-edH"/>
                                     <segue destination="yzf-PV-9cy" kind="presentation" id="NDe-wU-hqF"/>
@@ -752,7 +755,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ydm-6E-b02"/>
+        <segue reference="bfp-PV-GR2"/>
         <segue reference="Uhi-uJ-LOo"/>
         <segue reference="Jpo-JX-TjB"/>
     </inferredMetricsTieBreakers>
@@ -761,9 +764,6 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

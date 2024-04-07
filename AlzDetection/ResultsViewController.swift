@@ -12,6 +12,7 @@ import AWSS3
 class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     weak var clinicianViewController: ClinicianViewController?
     @IBOutlet weak var Table: UITableView!
+    
     @IBAction func MainMenuButton() {
         guard let MainMenu = storyboard? .instantiateViewController(withIdentifier: "MainMenu") as? HomeViewController else {
             return

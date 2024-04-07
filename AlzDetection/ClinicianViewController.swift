@@ -17,9 +17,6 @@ class ClinicianViewController: UIViewController, MFMailComposeViewControllerDele
     
     @IBOutlet weak var ClinicianEmail: UITextField!
     
-    @IBOutlet weak var ClinicianPhone: UITextField!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //
