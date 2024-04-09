@@ -13,6 +13,7 @@
 		32091F492BA4E7FE001ED82A /* QuickPoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 32091F482BA4E7FE001ED82A /* QuickPoseCore */; };
 		32091F4B2BA4E7FE001ED82A /* QuickPoseMP in Frameworks */ = {isa = PBXBuildFile; productRef = 32091F4A2BA4E7FE001ED82A /* QuickPoseMP */; };
 		32091F4D2BA4E7FE001ED82A /* QuickPoseSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 32091F4C2BA4E7FE001ED82A /* QuickPoseSwiftUI */; };
+		323440C62BB4936200217226 /* ConfirmAndUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323440C52BB4936200217226 /* ConfirmAndUploadViewController.swift */; };
 		325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD782B4C6A0000000428 /* AppDelegate.swift */; };
 		325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */; };
 		325ADD802B4C6A0000000428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325ADD7E2B4C6A0000000428 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		323440C52BB4936200217226 /* ConfirmAndUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmAndUploadViewController.swift; sourceTree = "<group>"; };
 		325ADD752B4C6A0000000428 /* AlzDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlzDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		325ADD782B4C6A0000000428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		325ADD7A2B4C6A0000000428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				32FBB9DD2B86A0F7004D7E02 /* loadingGif.gif */,
 				32FBB9DB2B869DDB004D7E02 /* gifLoader.swift */,
 				325ADD862B4C6A0100000428 /* Info.plist */,
+				323440C52BB4936200217226 /* ConfirmAndUploadViewController.swift */,
 				3283DF1B2B63157800084997 /* CustomCameraController.swift */,
 				32A231132B793B7800DEE7E2 /* postTestViewController.swift */,
 			);
@@ -471,6 +474,7 @@
 				4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */,
 				32FBB9DC2B869DDB004D7E02 /* gifLoader.swift in Sources */,
 				4B849BED2B5C2C1D00B6A506 /* ResultsViewController.swift in Sources */,
+				323440C62BB4936200217226 /* ConfirmAndUploadViewController.swift in Sources */,
 				325ADD792B4C6A0000000428 /* AppDelegate.swift in Sources */,
 				4B849BEB2B5C2B4200B6A506 /* InstructionsViewController.swift in Sources */,
 				325ADD7B2B4C6A0000000428 /* SceneDelegate.swift in Sources */,
@@ -661,7 +665,7 @@
 				INFOPLIST_FILE = AlzDetection/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please work";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save to Library";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = TRUE;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -693,7 +697,7 @@
 				INFOPLIST_FILE = AlzDetection/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please work";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save to Library";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = TRUE;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

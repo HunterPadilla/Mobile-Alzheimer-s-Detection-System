@@ -394,13 +394,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAF-JW-ghY">
-                                <rect key="frame" x="35" y="208" width="362" height="143.33333333333337"/>
-                                <string key="text">On the next screen, you will first be shown an example task. Once you confirm that you are ready, you will perform the example task that was shown to you before moving on to the next task.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETI-M9-u5Q">
                                 <rect key="frame" x="151" y="764" width="128" height="97"/>
                                 <constraints>
@@ -412,19 +405,34 @@
                                     <action selector="cancelTestButton:" destination="VpD-yI-dc0" eventType="touchUpInside" id="Svh-KJ-f7Z"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAF-JW-ghY">
+                                <rect key="frame" x="34" y="139" width="362" height="119.66666666666669"/>
+                                <string key="text">When you tap the "Perform Trials" button below, your camera will pop up and ask for screen recording permissions. Tap "Allow" and then proceed with the following instructions:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc3-eO-i0x">
+                                <rect key="frame" x="20" y="300" width="390" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">To perform the AwareMind Exam, Please position the phone in a spot that can visibly see you. Then record yourself walking to a chair and stand/sit down multiple times. When finished please stand up and tap the screen to exit recording.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Ei-8o-YkE"/>
                         <color key="backgroundColor" red="0.4352940917" green="0.7607843876" blue="0.98039215800000001" alpha="0.77007450330000005" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Xc2-Lp-kig" secondAttribute="bottom" constant="306" id="02W-O0-9j9"/>
-                            <constraint firstItem="Xc2-Lp-kig" firstAttribute="centerX" secondItem="yAF-JW-ghY" secondAttribute="centerX" constant="-2.5" id="1sg-Tm-sXn"/>
-                            <constraint firstItem="yAF-JW-ghY" firstAttribute="leading" secondItem="2Ei-8o-YkE" secondAttribute="leading" constant="35" id="5rK-pq-0eA"/>
-                            <constraint firstItem="yAF-JW-ghY" firstAttribute="top" secondItem="2Ei-8o-YkE" secondAttribute="top" constant="208" id="78G-YH-VTQ"/>
+                            <constraint firstItem="Xc2-Lp-kig" firstAttribute="centerX" secondItem="yAF-JW-ghY" secondAttribute="centerX" constant="-1.5" id="1sg-Tm-sXn"/>
+                            <constraint firstItem="yAF-JW-ghY" firstAttribute="leading" secondItem="2Ei-8o-YkE" secondAttribute="leading" constant="34" id="5rK-pq-0eA"/>
+                            <constraint firstItem="yAF-JW-ghY" firstAttribute="top" secondItem="2Ei-8o-YkE" secondAttribute="top" constant="139" id="78G-YH-VTQ"/>
                             <constraint firstItem="igx-IY-5k6" firstAttribute="top" secondItem="2Ei-8o-YkE" secondAttribute="top" constant="80" id="7Pw-dn-TnF"/>
                             <constraint firstItem="Xc2-Lp-kig" firstAttribute="leading" secondItem="2Ei-8o-YkE" secondAttribute="leading" constant="148" id="HKl-IL-a9k"/>
                             <constraint firstItem="Xc2-Lp-kig" firstAttribute="centerX" secondItem="ETI-M9-u5Q" secondAttribute="centerX" constant="-1.5" id="IlG-Ng-gYv"/>
                             <constraint firstItem="2Ei-8o-YkE" firstAttribute="bottom" secondItem="ETI-M9-u5Q" secondAttribute="bottom" constant="71" id="MJf-Vy-Bfc"/>
-                            <constraint firstItem="igx-IY-5k6" firstAttribute="centerX" secondItem="yAF-JW-ghY" secondAttribute="centerX" constant="-1" id="MWl-26-LdQ"/>
+                            <constraint firstItem="igx-IY-5k6" firstAttribute="centerX" secondItem="yAF-JW-ghY" secondAttribute="centerX" id="MWl-26-LdQ"/>
                             <constraint firstItem="igx-IY-5k6" firstAttribute="centerX" secondItem="VDt-ez-zeM" secondAttribute="centerX" id="ex7-LN-UnY"/>
                         </constraints>
                     </view>
@@ -437,6 +445,55 @@
             </objects>
             <point key="canvasLocation" x="-274.88372093023253" y="1039.6995708154507"/>
         </scene>
+        <!--Confirm And Upload View Controller-->
+        <scene sceneID="UBO-iY-Vaj">
+            <objects>
+                <viewController id="38B-OA-TPz" customClass="ConfirmAndUploadViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mAA-uu-B67">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-2U-bOX">
+                                <rect key="frame" x="152" y="627" width="126" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="hFf-I6-vfo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit Video"/>
+                                <connections>
+                                    <action selector="uploadButtonTapped:" destination="38B-OA-TPz" eventType="touchUpInside" id="hR7-xi-D1D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmU-2Z-e0H">
+                                <rect key="frame" x="162.33333333333334" y="258" width="105.66666666666666" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="4yR-TX-82U"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Re-Record"/>
+                                <connections>
+                                    <action selector="reRecordButton:" destination="38B-OA-TPz" eventType="touchUpInside" id="RZq-gu-u9k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ERB-yW-6fZ"/>
+                        <color key="backgroundColor" red="0.33333334329999997" green="0.58431375029999999" blue="0.75686275960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="KmU-2Z-e0H" firstAttribute="centerX" secondItem="mAA-uu-B67" secondAttribute="centerX" id="Ab6-Bg-3Yz"/>
+                            <constraint firstItem="KmU-2Z-e0H" firstAttribute="top" secondItem="ERB-yW-6fZ" secondAttribute="top" constant="258" id="OhF-U2-zBi"/>
+                            <constraint firstItem="ERB-yW-6fZ" firstAttribute="bottom" secondItem="gtm-2U-bOX" secondAttribute="bottom" constant="208" id="PwM-pd-K6K"/>
+                            <constraint firstItem="gtm-2U-bOX" firstAttribute="centerX" secondItem="KmU-2Z-e0H" secondAttribute="centerX" id="fdO-TV-Ec1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="YGt-Yq-GXd" kind="presentation" identifier="reRecord" id="EEg-3r-h1m"/>
+                        <segue destination="4uV-Zh-Hc3" kind="presentation" identifier="uploadSuccess" id="mx3-c9-Fen"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPj-BE-P9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1260" y="1752"/>
+        </scene>
         <!--Custom Camera View Controller-->
         <scene sceneID="uN3-US-T1F">
             <objects>
@@ -445,29 +502,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-aM-Csm">
-                                <rect key="frame" x="152" y="274" width="127" height="97"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="97" id="jOK-Fa-jM2"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Record Task: "/>
-                                <connections>
-                                    <action selector="RecordAction:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="keq-ma-TsS"/>
-                                    <action selector="startRecordingButton:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="thH-xI-vPJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAz-hQ-6h2">
-                                <rect key="frame" x="151" y="692" width="127" height="97"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="97" id="Xqx-LN-kbb"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Submit Video"/>
-                                <connections>
-                                    <action selector="testCompleted:" destination="YGt-Yq-GXd" eventType="touchUpInside" id="uC8-7O-nyJ"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kT-dB-eFz">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -475,19 +509,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bgv-rX-buB"/>
                         <color key="backgroundColor" red="0.4352940917" green="0.7607843876" blue="0.98039215800000001" alpha="0.77007450330000005" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="YAz-hQ-6h2" firstAttribute="centerX" secondItem="GXj-xh-uV4" secondAttribute="centerX" id="A27-54-5n0"/>
-                            <constraint firstItem="CH6-aM-Csm" firstAttribute="top" secondItem="bgv-rX-buB" secondAttribute="top" constant="274" id="JfJ-D5-Uwi"/>
-                            <constraint firstItem="CH6-aM-Csm" firstAttribute="leading" secondItem="bgv-rX-buB" secondAttribute="leading" constant="152" id="Y3m-IB-39K"/>
-                            <constraint firstItem="YAz-hQ-6h2" firstAttribute="leading" secondItem="bgv-rX-buB" secondAttribute="leading" constant="151" id="cwL-pY-TvA"/>
-                            <constraint firstItem="bgv-rX-buB" firstAttribute="bottom" secondItem="YAz-hQ-6h2" secondAttribute="bottom" constant="143" id="k7S-R9-Cu3"/>
-                            <constraint firstItem="CH6-aM-Csm" firstAttribute="centerX" secondItem="GXj-xh-uV4" secondAttribute="centerX" id="mA2-iZ-jn3"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="GXj-xh-uV4" id="8Xp-73-2sT"/>
                         <outlet property="overlayView" destination="0kT-dB-eFz" id="odX-op-3RI"/>
-                        <segue destination="4uV-Zh-Hc3" kind="presentation" identifier="uploadSuccess" modalPresentationStyle="fullScreen" id="uh8-sg-Jvw"/>
+                        <segue destination="38B-OA-TPz" kind="presentation" identifier="recordingSaved" modalPresentationStyle="fullScreen" id="n1x-xa-cV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPA-Mj-6r0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -499,18 +525,18 @@
             <objects>
                 <viewController title="postTestViewController" id="4uV-Zh-Hc3" customClass="postTestViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vWG-92-Qjd">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-6G-bN2">
-                                <rect key="frame" x="16" y="78" width="398" height="313"/>
+                                <rect key="frame" x="16" y="78" width="398" height="303"/>
                                 <string key="text">Great work on completing AwareMinds audio instructed test. The video you recorded has been sent to our AI and is being evaluated! </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHq-6I-QEg">
-                                <rect key="frame" x="152" y="736" width="127" height="97"/>
+                                <rect key="frame" x="152" y="726" width="127" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="J6L-AH-vFL"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="UL4-mh-tDI"/>
@@ -524,7 +550,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hke-nV-d1A">
-                                <rect key="frame" x="152" y="571" width="127" height="97"/>
+                                <rect key="frame" x="152" y="561" width="127" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="2OP-Ln-RXU"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="PPc-oq-TJx"/>
@@ -561,7 +587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WZ-Ee-8t3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274.88372093023253" y="2436.6952789699571"/>
+            <point key="canvasLocation" x="-275" y="2677"/>
         </scene>
         <!--Thank You Page-->
         <scene sceneID="2d7-Y0-RaR">
@@ -726,6 +752,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="vLM-Cy-Ue4"/>
         <segue reference="cAU-ZD-QTE"/>
         <segue reference="3hC-GT-GIW"/>
         <segue reference="Jpo-JX-TjB"/>

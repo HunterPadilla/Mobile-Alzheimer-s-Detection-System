@@ -7,49 +7,46 @@
 
 import UIKit
 import SwiftUI
-import MobileCoreServices
-import Photos
-import Amplify
-import AWSS3
-
-import AVFoundation
 import QuickPoseCore
 import QuickPoseCamera
 import ReplayKit
 
+
 struct tmpVar{
     static var tmp = true;
+    static var videoURL: URL?
 }
-class CustomCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+class CustomCameraViewController: UIViewController, UINavigationControllerDelegate {
+    
     var camera: QuickPoseCamera?
     var simulatedCamera: QuickPoseSimulatedCamera?
     var quickPose = QuickPose(sdkKey: "01HS7MB9E2ZSGS2ZXW5PQQ0J3B") // register for your free key at https://dev.quickpose.ai
+   
     
     @IBOutlet var cameraView: UIView!
     @IBOutlet var overlayView: UIImageView!
     
-    
-    var screenRecorder: RPScreenRecorder?
+    var screenRecorder = RPScreenRecorder.shared()
     
     //This Function is triggered when the user taps the screen
     @objc func tapClick(){
         //Stops the current screen recording, allows the user to save the screen recording to the phone
+        //TODO: Once the recording is FULLY complete, upload to S3
         stopScreenRecording()
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         camera = QuickPoseCamera(useFrontCamera: true) // setup camera
         try? camera?.start(delegate: quickPose)
-
+        
         let customPreviewLayer = AVCaptureVideoPreviewLayer(session: camera!.session!)
         customPreviewLayer.videoGravity = .resizeAspectFill
         customPreviewLayer.frame.size = view.frame.size
         cameraView.layer.addSublayer(customPreviewLayer)
-
+        
         // setup overlay
         overlayView.contentMode = .scaleAspectFill // keep overlays in the same scale as camera output
         overlayView.frame.size = view.frame.size
@@ -63,13 +60,14 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         
         tmpVar.tmp = true
         
+        
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.view.bringSubviewToFront(overlayView)
         
-        quickPose.start(features: [.overlay(.straightArmsUpperBody)], onFrame: { status, image, record, feedback, landmarks in
+        quickPose.start(features: [.overlay(.wholeBody)], onFrame: { status, image, record, feedback, landmarks in
             DispatchQueue.main.async {
                 self.overlayView.image = image
             }
@@ -88,7 +86,7 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         })
         
     }
-
+    
     //When the View Dissapears (likely due to segue) end the camera usage and quickpose overlay
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -96,15 +94,16 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
         quickPose.stop()
     }
     
+
+
     // Function to start screen recording
     func startScreenRecording() {
-        guard screenRecorder?.isRecording == false else {
-            //TODO: somehow fix this infinite print...
+        guard screenRecorder.isRecording == false else {
             print("Screen recording is already in progress.")
             return
         }
         
-        screenRecorder?.startRecording { [] error in
+        screenRecorder.startRecording { [] error in
             if let error = error {
                 print("Failed to start recording: \(error.localizedDescription)")
             }
@@ -112,166 +111,72 @@ class CustomCameraViewController: UIViewController, UIImagePickerControllerDeleg
     }
 
     // Function to stop screen recording
-    func stopScreenRecording() {
-        screenRecorder?.stopRecording { previewViewController, error in
-            if let error = error {
-                print("Failed to stop recording: \(error.localizedDescription)")
+    func stopScreenRecording(){
+    
+        tmpVar.videoURL = tempURL()
+        screenRecorder.stopRecording(withOutput: tmpVar.videoURL!) { (error) in
+                guard error == nil else{
+                    print("Failed to save ")
+                    return
+                }
+            
+            print(tmpVar.videoURL!)
             }
-            if let previewViewController = previewViewController {
-                    previewViewController.previewControllerDelegate = self
-                    
-                // Present previewViewController to allow the user to save or share the recording
-                self.present(previewViewController, animated: true, completion: nil)
-                
-            }
-        }
+        performSegue(withIdentifier: "recordingSaved", sender: self)
+            
+            
+          
+        
     }
+    
+    func tempURL() -> URL? {
+        let directory = NSTemporaryDirectory() as NSString
+            
+        if directory != "" {
+            let path = directory.appendingPathComponent(NSUUID().uuidString + ".mp4")
+            return URL(fileURLWithPath: path)
+        }
+        return nil
+    }
+    
+    
 }
 
-// Extension to handle RPPreviewViewControllerDelegate methods
-extension CustomCameraViewController: RPPreviewViewControllerDelegate {
-    func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
-        // Dismiss the preview controller
-        previewController.dismiss(animated: true, completion: {
-            self.performSegue(withIdentifier: "uploadSuccess", sender: self)
-        })
-    }
-}
 
     
+// Extension to handle RPPreviewViewControllerDelegate methods
+extension CustomCameraViewController: RPPreviewViewControllerDelegate {
+    
+    func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
+        
+        // Dismiss the preview controller
+        previewController.dismiss(animated: true, completion: {
+            self.performSegue(withIdentifier: "recordingSaved", sender: self)
+        })
+       
+    }
+    
+}
+    
+///Below is code that might assist in the future based on previous application versions
+///
+///
+////Code to enable TTS, Import AVFoundation and copy paste where needed
+//let synthesizer = AVSpeechSynthesizer()
 //
-//    //Creates the video as a URL
-//    var videoAndImageReview = UIImagePickerController()
-//    var videoURL: URL?
+//func readTextAloud(){
 //    
-//    //Code to enable TTS, Import AVFoundation and copy paste where needed
-//    let synthesizer = AVSpeechSynthesizer()
+//    //Complete the String with whatever you want to say.
+//    let utterance = AVSpeechUtterance(string: "To prepare for task #1, please step three to five feet away from your phone at an angle where your camera can see you. Press record button to start, and return to your desired testing position.")
 //    
-//    func readTextAloud(){
-//        
-//        //Complete the String with whatever you want to say.
-//        let utterance = AVSpeechUtterance(string: "To prepare for task #1, please step three to five feet away from your phone at an angle where your camera can see you. Press record button to start, and return to your desired testing position.")
-//        
-//        //Language Settings for TTS
-//        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-//        
-//        //Speed of TTS (0.4 is just slightly slower than normal talking speed)
-//        utterance.rate = 0.4
-//        
-//        //Begins the TTS
-//        synthesizer.speak(utterance)
-//    }
+//    //Language Settings for TTS
+//    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
 //    
+//    //Speed of TTS (0.4 is just slightly slower than normal talking speed)
+//    utterance.rate = 0.4
 //    
-//
-//
-//    //Recording button, allows the program to access camera1 which is only available on Mobile Phones
-//    @IBAction func RecordAction(_ sender: UIButton) {
-//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-//            let imagePicker = UIImagePickerController()
-//            imagePicker.delegate = self
-//            imagePicker.sourceType = .camera
-//            //LEAVE kUTTypeMove even though theres a warning!! trying to fix the warning complicates the code and causes bugs
-//            imagePicker.mediaTypes = [kUTTypeMovie as String]
-//            imagePicker.allowsEditing = true
-//            present(imagePicker, animated: true, completion: nil)
-//            readTextAloud()
-//        } else {
-//            print("Camera Unavailable")
-//        }
-//    }
-//      
-//    //Image Picker Controller allows you to pick the video from your library for display purposes if necessary
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        dismiss(animated: true, completion: nil)
-//        
-//        guard
-//            let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String,
-//            //LEAVE kUTTypeMove even though theres a warning!! trying to fix the warning complicates the code and causes bugs
-//            mediaType == kUTTypeMovie as String,
-//            let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL
-//        else {
-//            print("Error: Unable to get the video URL.")
-//            return
-//        }
-//        
-//        videoURL = url
-//        
-//        PHPhotoLibrary.shared().performChanges({
-//            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
-//        }) { success, error in
-//            if success {
-//                print("Video saved successfully.")
-//            } else {
-//                print("Error saving video: \(error?.localizedDescription ?? "Unknown error")")
-//            }
-//        }
-//    }
-//
-//    //This function allows the program to check in case the vide finished saving correctly, and if not show the console why.
-//    @objc func video(_ videoPath: String, didFinishSavingWithError error: Error?, contextInfo info: AnyObject) {
-//        let title = (error == nil) ? "Success" : "Error"
-//        let message = (error == nil) ? "Video was saved" : "Video failed to save"
-//        
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-//        present(alert, animated: true, completion: nil)
-//    }
-//    
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//        dismiss(animated: true, completion: nil)
-//    }
-//    
-//    //Brings up the Video review so you could scroll through or even crop your video before saving / viewing.
-//    func videoAndImageReview(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        if let url = info[UIImagePickerController.InfoKey.mediaURL.rawValue] as? URL {
-//            videoURL = url
-//            print("videoURL: \(String(describing: videoURL))")
-//        }
-//        dismiss(animated: true, completion: nil)
-//    }
-//    
-//    //If the test is completed, upload the most recent video to S3
-//    @IBAction func testCompleted(_ sender: Any) {
-//            
-//        //Saves the video in the S3 bucket with the key "myVideo.mp4"
-//        //TASK: figure out how to save multiple vidoes based on DATE under the same user
-//            Task { @MainActor in
-//                let dataString = "My Data"
-//                let userVideoKey = "\(try await Amplify.Auth.getCurrentUser().userId).mp4"
-//                guard let filename = FileManager.default.urls(
-//                    for: .documentDirectory,
-//                    in: .userDomainMask
-//                ).first?.appendingPathComponent(userVideoKey)
-//                else { return }
-//                
-//                try dataString.write(
-//                    to: filename,
-//                    atomically: true,
-//                    encoding: .utf8
-//                )
-//                
-//                let uploadTask = Amplify.Storage.uploadFile(
-//                    key: userVideoKey,
-//                    local: videoURL!
-//                )
-//                
-//                Task {
-//                    for await progress in await uploadTask.progress {
-//                        print("Progress: \(progress)")
-//                    }
-//                }
-//                //If upload is successful THEN performsegue to signify upload completion for the user.
-//                let data = try await uploadTask.value
-//                print("Upload Completed: \(data)")
-//                performSegue(withIdentifier: "uploadSuccess", sender: self)
-//                
-//            }
-//        }
-//    
-//    
-//    
-//    
+//    //Begins the TTS
+//    synthesizer.speak(utterance)
 //}
 
 
