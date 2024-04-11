@@ -1,12 +1,13 @@
 {
+  "originHash" : "440bed2a1b971a122bbc4d2e1b15010a856c5106912467cb15a6e180c67a8181",
   "pins" : [
     {
       "identity" : "amplify-swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/aws-amplify/amplify-swift",
       "state" : {
-        "revision" : "f57b88c6554b9528c69cfc9ae9a633ca981381df",
-        "version" : "2.26.0"
+        "revision" : "7d9640a5b7416f02f03463972dc2c6d87b295545",
+        "version" : "2.27.2"
       }
     },
     {
@@ -32,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/awslabs/aws-crt-swift",
       "state" : {
-        "revision" : "fd1756b6e5c9fd1a906edfb743f7cb64c2c98639",
-        "version" : "0.17.0"
+        "revision" : "0d0a0cf2e2cb780ceeceac190b4ede94f4f96902",
+        "version" : "0.26.0"
       }
     },
     {
@@ -41,8 +42,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/awslabs/aws-sdk-swift.git",
       "state" : {
-        "revision" : "387016f3e62119e9962da4357c63671c694554e6",
-        "version" : "0.31.0"
+        "revision" : "485501db8b0c57d6636c2b33a03dcd77ee0911f9",
+        "version" : "0.36.1"
+      }
+    },
+    {
+      "identity" : "quickpose-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/quickpose/quickpose-ios-sdk.git",
+      "state" : {
+        "revision" : "1106971fbeb678a4c5061cec8519c7c42f1c136b",
+        "version" : "1.2.5"
       }
     },
     {
@@ -50,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/smithy-lang/smithy-swift",
       "state" : {
-        "revision" : "ab999a9f0c972adcb350beda3c630a35697f7e8e",
-        "version" : "0.35.0"
+        "revision" : "64e66f3e3ac07d4180c2460a7af6e4ba4b92e9cb",
+        "version" : "0.41.0"
       }
     },
     {
@@ -73,32 +83,14 @@
       }
     },
     {
-      "identity" : "swift-collections",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-collections",
-      "state" : {
-        "revision" : "d029d9d39c87bed85b1c50adee7c41795261a192",
-        "version" : "1.0.6"
-      }
-    },
-    {
       "identity" : "swift-log",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
       "state" : {
-        "revision" : "532d8b529501fb73a2455b179e0bbb6d49b652ed",
-        "version" : "1.5.3"
-      }
-    },
-    {
-      "identity" : "xmlcoder",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/MaxDesiatov/XMLCoder.git",
-      "state" : {
-        "revision" : "80b4a1646399b8e4e0ce80711653476a85bd5e37",
-        "version" : "0.17.0"
+        "revision" : "e97a6fcb1ab07462881ac165fdbb37f067e205d5",
+        "version" : "1.5.4"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
