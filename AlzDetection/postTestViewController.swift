@@ -36,8 +36,12 @@ class postTestViewController: UIViewController {
         readTextAloud()
         // Do any additional setup after loading the view.
     }
-    @IBAction func viewResultsButton(_ sender: Any) {
-        performSegue(withIdentifier: "resultsButton", sender: self)
+    
+    @IBAction func ViewResultsButton(_ sender: Any) {
+        guard let ResultsPage = storyboard? .instantiateViewController(withIdentifier: "Results") as? ResultsViewController else {
+            return
+        }
+        present(ResultsPage, animated: true)
     }
     
     @IBAction func triggerMainMenuSegue(_ sender: Any) {

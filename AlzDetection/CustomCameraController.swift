@@ -20,7 +20,7 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
     
     var camera: QuickPoseCamera?
     var simulatedCamera: QuickPoseSimulatedCamera?
-    var quickPose = QuickPose(sdkKey: "01HS7MB9E2ZSGS2ZXW5PQQ0J3B") // register for your free key at https://dev.quickpose.ai
+    var quickPose = QuickPose(sdkKey: "01HVC9GCC9ADG4A65N3CA6RE2F") // register for your free key at https://dev.quickpose.ai
    
     
     @IBOutlet var cameraView: UIView!
