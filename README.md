@@ -7,24 +7,24 @@ Install Amplify CLI [https://docs.amplify.aws/swift/start/getting-started/instal
 - Sign in to AWS Account:
 
 Sign-in URL: https://298516394167.signin.aws.amazon.com/console
-username: G_5
-password: fea4pem3KBU5dvz@kqb
+- username: G_5
+- password: fea4pem3KBU5dvz@kqb
 
 [May need to create a IAM User to generate a Secret Access Key]
-Access Key: 
-Secret Access Key: 
+- Access Key: 
+- Secret Access Key: 
 
 Run commands:
-"npm install -g npm"
+- "npm install -g npm"
     [installs npm]
 
-"npm install -g npx" 
+- "npm install -g npx" 
     [installs npx]
 
-"npx install -g @aws-amplify/cli" 
+- "npx install -g @aws-amplify/cli" 
     [Sets up the Amplify CLI]
 
-"npx amplify init"
+- "npx amplify init"
     [IN root of project folder to initialize and add any local files missing]
     
 ----------------------------------------------------------------------------------
