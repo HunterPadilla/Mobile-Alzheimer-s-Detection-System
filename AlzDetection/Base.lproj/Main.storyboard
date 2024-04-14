@@ -572,11 +572,11 @@
             <objects>
                 <viewController storyboardIdentifier="Results" title="Results Screen" id="zic-tL-35i" customClass="ResultsViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YVA-vu-Lm6">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LNK-dc-5MZ">
-                                <rect key="frame" x="35" y="176" width="360" height="573.66666666666663"/>
+                                <rect key="frame" x="35" y="176" width="360" height="583.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -786,7 +786,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="At0-lX-WyA"/>
+        <segue reference="UGL-bU-RVg"/>
         <segue reference="EEg-3r-h1m"/>
         <segue reference="akv-vo-3ZG"/>
         <segue reference="Jpo-JX-TjB"/>
