@@ -6,183 +6,217 @@
 //
 
 import UIKit
-import AWSS3
-import MobileCoreServices
-import AVFoundation
+
 import Amplify
+import AWSCognitoAuthPlugin
 
 import QuickPoseCore
 
-class ConfirmAndUploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    let imagePicker = UIImagePickerController()
-    let quickPosePP = QuickPosePostProcessor(sdkKey: "01HS7MB9E2ZSGS2ZXW5PQQ0J3B")
-    var videoURL = tmpVar.videoURL
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imagePicker.delegate = self
-    }
-    
-    @IBAction func uploadButtonTapped(_ sender: UIButton) {
-        
-        self.performSegue(withIdentifier: "uploadSuccess", sender: self)
-        
-///Following is commented out for demo functionality, but is meant to select the video from the users library for upload process
-//        imagePicker.sourceType = .photoLibrary
-//        
-//        //Ignore these deprecation warnings for kUTTypeMovie
-//        imagePicker.mediaTypes = [kUTTypeMovie as String]
-//        present(imagePicker, animated: true, completion: nil)
-//        
+import xlsxwriter
+import Foundation
 
-    }
-    
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : URL]) async {
-        //Ignore these deprecation warnings for kUTTypeMovie
-            guard let mediaType = info[.mediaType] as? String, mediaType == kUTTypeMovie as String else {
-                print("Selected file is not a video")
-                return
-            }
-
-            guard let videoURL = info[.mediaURL] else {
-                print("Failed to get video URL")
-                return
-            }
-        
-        }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-        
-    }
-    
-    func testCompleted(_ sender: Any) async {
-        
-        //VideoURL.absoluteString takes the URL as a string
-        let request = QuickPosePostProcessor.Request(
-            input: Bundle.main.url(forResource: videoURL?.absoluteString, withExtension: nil)!,
-            output: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(videoURL!.absoluteString),
-            outputType: .mov)
-        
-        //Sets the Features we are attempting to collect data from
-        let features: [QuickPose.Feature] = [.rangeOfMotion(.hip(side: .right, clockwiseDirection: true), style: QuickPose.Style(relativeFontSize: 0.5, relativeArcSize: 0.5, relativeLineWidth: 0.5))]
-        
-        
-        //Finally we can process the file.
-        print("Processing \(request.input.lastPathComponent) -> \(request.output)")
-        do {
-            try quickPosePP.process(features: features, isFrontCamera: true, request: request) { progress, time, _, _, features, _, _ in
-                let fileProcessingProgress = Int(progress * 100)
-                if let feature = features.first {
-                    print("\(fileProcessingProgress)%, \(feature.key.displayString) \(feature.value.stringValue)")
-                } else {
-                    print("\(fileProcessingProgress)%")
-                }
-            }
-        } catch {
-            print("\(request.input.lastPathComponent): file could not be processed: \(error)")
-        }
-        
-        
-        
-        
-        
-        
-    }
-    
-    func documentDirectory() -> URL {
-      let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-      return documentsDirectory
-    }
-    
+struct userInfo{
+    //Stores the Username of the user logged in
+    public static var username = ""
 }
 
-///Below is code that might help in the future based on previous application versions.
 
-///Creates the video as a URL
-//var videoAndImageReview = UIImagePickerController()
-//var videoURL: URL?
-//
-////Image Picker Controller allows you to pick the video from your library for display purposes if necessary
-//func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//    dismiss(animated: true, completion: nil)
-//    
-//    guard
-//        let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String,
-//        //LEAVE kUTTypeMove even though theres a warning!! trying to fix the warning complicates the code and causes bugs
-//        mediaType == kUTTypeMovie as String,
-//        let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL
-//    else {
-//        print("Error: Unable to get the video URL.")
-//        return
-//    }
-//    
-//    videoURL = url
-//
-//    PHPhotoLibrary.shared().performChanges({
-//        PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
-//    }) { success, error in
-//        if success {
-//            print("Video saved successfully.")
-//        } else {
-//            print("Error saving video: \(error?.localizedDescription ?? "Unknown error")")
-//        }
-//    }
-//}
-//
-////This function allows the program to check in case the vide finished saving correctly, and if not show the console why.
-//@objc func video(_ videoPath: String, didFinishSavingWithError error: Error?, contextInfo info: AnyObject) {
-//    let title = (error == nil) ? "Success" : "Error"
-//    let message = (error == nil) ? "Video was saved" : "Video failed to save"
-//    
-//    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-//    present(alert, animated: true, completion: nil)
-//}
-//
-//func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//    dismiss(animated: true, completion: nil)
-//}
-//
-////Brings up the Video review so you could scroll through or even crop your video before saving / viewing.
-//func videoAndImageReview(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//    if let url = info[UIImagePickerController.InfoKey.mediaURL.rawValue] as? URL {
-//        videoURL = url
-//        print("videoURL: \(String(describing: videoURL))")
-//    }
-//    dismiss(animated: true, completion: nil)
-//}
+class ConfirmAndUploadViewController: UIViewController {
+    
+    //A lot of class wide variables...
+    //Filename is created using the username of the current Auth session
+    let tmpFileName = "export_dataPoints.xls"
+    var destinationPath: String = ""
+    var workbook: UnsafeMutablePointer<lxw_workbook>?
+    var worksheet: UnsafeMutablePointer<lxw_worksheet>?
+    var formatHeader: UnsafeMutablePointer<lxw_format>?
+    var format1: UnsafeMutablePointer<lxw_format>?
+    private var writingLine: UInt32 = 0
+    private var needWriterPreparation = false
+    
+    //This function simply restarts the recording process if the user wishes to attemp the task again.
+    @IBAction func reRecordButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "reRecord", sender: self)
+    }
+    
+    //Prepares the Excel sheet and then finalizes it using export()
+    //NOTE: in the future, export() can be removed and called from anywhere to build/complete the file such as after data collection is properly implemented
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Forces an async function to occur on viewDidLoad to grab the username and store it in the struct
+        Task{await nameTheFile()}
+        prepareXlsWriter()
+        export()
+    }
+    
+    func nameTheFile() async{
+        do{
+            let username = try await Amplify.Auth.getCurrentUser().username
+            userInfo.username = username
+            
+        }
+        catch{
+            return
+        }
+    }
+    
+    
+    //This function creates a temporary doc directory for the file to use
+    private func docDirectoryPath() -> String {
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        return dirPaths[0]
+    }
+    
+    
 
-///THIS CODE WAS MEANT TO UPLOAD A VIDEO TO S3, IT HAS SINCE BEEN REPLACED BUT KEPT FOR POSSIBLE FUTURE REFERENCE
-//let dataString = "My Data"
-//        let fileNameKey = "myFile.txt"
-//        guard let filename = FileManager.default.urls(
-//            for: .documentDirectory,
-//            in: .userDomainMask
-//        ).first?.appendingPathComponent(fileNameKey)
-//        else { return }
-//
-//        do {
-//            try dataString.write(
-//                to: filename,
-//                atomically: true,
-//                encoding: .utf8
-//            )
-//
-//            let uploadTask = Amplify.Storage.uploadFile(
-//                key: fileNameKey,
-//                local: videoURL!
-//            )
-//
-//            Task {
-//                for await progress in await uploadTask.progress {
-//                    print("Progress: \(progress)")
-//                }
-//            }
-//
-//            let data = try await uploadTask.value
-//            print("Completed: \(data)")
-//        } catch {
-//            print("Error: \(error)")
-//        }
+    //This function prepares the XLS writer so we have a proper file path, and proper workbook/worksheet defined
+    private func prepareXlsWriter() {
+        let directoryPath = docDirectoryPath()
+        destinationPath = (directoryPath as NSString).appendingPathComponent(tmpFileName)
+        workbook = workbook_new(destinationPath)
+        worksheet = workbook_add_worksheet(workbook, nil)
+        formatHeader = workbook_add_format(workbook)
+        format_set_bold(formatHeader)
+        format1 = workbook_add_format(workbook)
+        format_set_bg_color(format1, 0xDDDDDD)
+        needWriterPreparation = true
+        print(destinationPath)
+    }
+    
+    //This function builds the headers for each column and assigns the rows underneath it
+    private func buildHeader() {
+        writingLine = 0
+        let format = formatHeader
+        format_set_bold(format)
+        worksheet_write_string(worksheet, writingLine, 0, "leftWaist", format)
+        worksheet_write_string(worksheet, writingLine + 1, 0, "x_value", format)
+        worksheet_write_string(worksheet, writingLine + 2, 0, "y_value", format)
+        worksheet_write_string(worksheet, writingLine + 3, 0, "z_value", format)
+        
+        worksheet_write_string(worksheet, writingLine, 1, "rightWaist", format)
+        worksheet_write_string(worksheet, writingLine + 1, 1, "x_value", format)
+        worksheet_write_string(worksheet, writingLine + 2, 1, "y_value", format)
+        worksheet_write_string(worksheet, writingLine + 3, 1, "z_value", format)
+        
+        worksheet_write_string(worksheet, writingLine, 2, "leftShoulder", format)
+        worksheet_write_string(worksheet, writingLine + 1, 2, "x_value", format)
+        worksheet_write_string(worksheet, writingLine + 2, 2, "y_value", format)
+        worksheet_write_string(worksheet, writingLine + 3, 2, "z_value", format)
+        
+        worksheet_write_string(worksheet, writingLine, 3, "rightShoulder", format)
+        worksheet_write_string(worksheet, writingLine + 1, 3, "x_value", format)
+        worksheet_write_string(worksheet, writingLine + 2, 3, "y_value", format)
+        worksheet_write_string(worksheet, writingLine + 3, 3, "z_value", format)
+    }
+    
+    //This function actually writes the values in for each row that was specified under the headers, using data from the Database class.
+    private func buildNewLine(product: Product) {
+        let lineFormat = (writingLine % 2 == 1) ? format1 : nil
+        
+        // Write leftWaist measurements
+        worksheet_write_number(worksheet, writingLine + 1, 0, product.leftWaist.x_value, lineFormat)
+        worksheet_write_number(worksheet, writingLine + 2, 0, product.leftWaist.y_value, lineFormat)
+        worksheet_write_number(worksheet, writingLine + 3, 0, product.leftWaist.z_value, lineFormat)
+        
+        // Write rightWaist measurements
+        worksheet_write_number(worksheet, writingLine + 1, 1, product.rightWaist.x_value, lineFormat)
+        worksheet_write_number(worksheet, writingLine + 2, 1, product.rightWaist.y_value, lineFormat)
+        worksheet_write_number(worksheet, writingLine + 3, 1, product.rightWaist.z_value, lineFormat)
+        
+        // Write leftShoulder measurements
+        worksheet_write_number(worksheet, writingLine + 1, 2, product.leftShoulder.x_value, lineFormat)
+        worksheet_write_number(worksheet, writingLine + 2, 2, product.leftShoulder.y_value, lineFormat)
+        worksheet_write_number(worksheet, writingLine + 3, 2, product.leftShoulder.z_value, lineFormat)
+        
+        // Write rightShoulder measurements
+        worksheet_write_number(worksheet, writingLine + 1, 3, product.rightShoulder.x_value, lineFormat)
+        worksheet_write_number(worksheet, writingLine + 2, 3, product.rightShoulder.y_value, lineFormat)
+        worksheet_write_number(worksheet, writingLine + 3, 3, product.rightShoulder.z_value, lineFormat)
+        
+        writingLine += 4 // Move to the next set of measurements
+    }
+    
+    //This function handles the creation of the database, and other necessary function calls
+    private func export() {
+        if needWriterPreparation {
+            buildHeader()
+            let productList = Database().productList
+            for product in productList {
+                buildNewLine(product: product)
+            }
+            workbook_close(workbook)
+            needWriterPreparation = false
+        }
+    }
+    
+    
+    
+    
+    
+    
+    //This button function is what triggers the uploading of the data in the form of a spreadsheet to S3
+    @IBAction func uploadButtonTapped(_ sender: UIButton) {
+        Task { @MainActor in
+            
+            //Set the file name for the upload to S3
+            //These few lines set the filename to be unique to every userID that is logged in.
+        
+            let fileName = "export_dataPoints.xls"
+            
+            guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+                return
+            }
+
+            let filePath = documentDirectory.appendingPathComponent(fileName)
+            print(filePath)
+            // Upload the Excel file to Amazon S3
+            do {
+                let uploadTask = Amplify.Storage.uploadFile(key: "\(userInfo.username)_dataPoints.xls", local: filePath)
+
+                Task {
+                    for await progress in await uploadTask.progress {
+                        print("Progress: \(progress)")
+                    }
+                }
+                
+                //Only complete the segue if the upload to S3 completes as well
+                let data = try await uploadTask.value
+                print("Completed: \(data)")
+                self.performSegue(withIdentifier: "uploadSuccess", sender: self)
+
+            } catch {
+                print("Error uploading file to S3: \(error)")
+            }
+        }
+    }
+}
+
+//These hold the values for the X,Y, and Z coordinates in each Joint
+struct Measurement {
+    var x_value: Double
+    var y_value: Double
+    var z_value: Double
+}
+
+//This struct holds the Joint variables
+struct Product {
+    var leftWaist: Measurement
+    var rightWaist: Measurement
+    var leftShoulder: Measurement
+    var rightShoulder: Measurement
+}
+
+//This Database stores the positional data from the coordinates which is then tied to each column
+class Database {
+    lazy var productList: [Product] = {
+        return [
+            //This is where the data is entered for the Excel Sheet
+            //In the future, this can be changed to take values of type double to store the coordinate data from pose estimation
+            Product(leftWaist: Measurement(x_value: 1.0, y_value: 2.0, z_value: 3.0),
+                    rightWaist: Measurement(x_value: 4.0, y_value: 5.0, z_value: 6.0),
+                    leftShoulder: Measurement(x_value: 7.0, y_value: 8.0, z_value: 9.0),
+                    rightShoulder: Measurement(x_value: 10.0, y_value: 11.0, z_value: 12.0))
+        ]
+    }()
+}
