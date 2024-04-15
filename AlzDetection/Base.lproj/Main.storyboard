@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VpD-yI-dc0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="38B-OA-TPz">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -413,7 +413,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc3-eO-i0x">
-                                <rect key="frame" x="20" y="300" width="390" height="175"/>
+                                <rect key="frame" x="20" y="339" width="390" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">To perform the AwareMind Exam, Please position the phone in a spot that can visibly see you. Then record yourself walking to a chair and stand/sit down multiple times. When finished please stand up and tap the screen to exit recording.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -453,13 +453,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-2U-bOX">
-                                <rect key="frame" x="152" y="627" width="126" height="97"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-2U-bOX" userLabel="Submit Data">
+                                <rect key="frame" x="156" y="627" width="118" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="hFf-I6-vfo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Submit Video"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit Data"/>
                                 <connections>
                                     <action selector="uploadButtonTapped:" destination="38B-OA-TPz" eventType="touchUpInside" id="hR7-xi-D1D"/>
                                 </connections>
@@ -499,7 +499,7 @@
             <objects>
                 <viewController id="YGt-Yq-GXd" customClass="CustomCameraViewController" customModule="AlzDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GXj-xh-uV4">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kT-dB-eFz">
@@ -752,9 +752,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vLM-Cy-Ue4"/>
-        <segue reference="cAU-ZD-QTE"/>
-        <segue reference="3hC-GT-GIW"/>
+        <segue reference="EEg-3r-h1m"/>
+        <segue reference="bfp-PV-GR2"/>
+        <segue reference="DJN-DC-Fw1"/>
         <segue reference="Jpo-JX-TjB"/>
     </inferredMetricsTieBreakers>
     <resources>

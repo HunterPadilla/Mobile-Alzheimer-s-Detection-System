@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 9fa9f617fcc7afb7956254b6da16c0e0951fde97
+PODS:
+  - libxlsxwriter (1.1.7)
+
+DEPENDENCIES:
+  - libxlsxwriter
+
+SPEC REPOS:
+  trunk:
+    - libxlsxwriter
+
+SPEC CHECKSUMS:
+  libxlsxwriter: e83575045c1888806f49a181cad1384f2e4198d3
+
+PODFILE CHECKSUM: 79eb6fe9e4610ccd1d83e7dd2ce1a606eadd3fe2
 
 COCOAPODS: 1.15.2
