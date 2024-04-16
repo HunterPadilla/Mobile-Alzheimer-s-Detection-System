@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2261D89B26D29E36BA5DF785 /* Pods_AlzDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F451D9097956850D2BAB397F /* Pods_AlzDetection.framework */; };
+		2ED2736469F525E8774E28F6 /* Pods_AlzDetection_AlzDetectionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD2993B628D8CECF81D28BF /* Pods_AlzDetection_AlzDetectionUITests.framework */; };
 		32091F472BA4E7FE001ED82A /* QuickPoseCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 32091F462BA4E7FE001ED82A /* QuickPoseCamera */; };
 		32091F492BA4E7FE001ED82A /* QuickPoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 32091F482BA4E7FE001ED82A /* QuickPoseCore */; };
 		32091F4B2BA4E7FE001ED82A /* QuickPoseMP in Frameworks */ = {isa = PBXBuildFile; productRef = 32091F4A2BA4E7FE001ED82A /* QuickPoseMP */; };
@@ -32,7 +34,6 @@
 		32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C95C242B4F7F1700DC358D /* LoginViewController.swift */; };
 		32FBB9DC2B869DDB004D7E02 /* gifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FBB9DB2B869DDB004D7E02 /* gifLoader.swift */; };
 		32FBB9DE2B86A0F7004D7E02 /* loadingGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32FBB9DD2B86A0F7004D7E02 /* loadingGif.gif */; };
-		4B7CD0C92B936E2F00CE9BD1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CD0C82B936E2F00CE9BD1 /* TableViewCell.swift */; };
 		4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */; };
 		4B849BEB2B5C2B4200B6A506 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */; };
 		4B849BED2B5C2C1D00B6A506 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */; };
@@ -40,6 +41,7 @@
 		4B849BF12B5C2E5F00B6A506 /* ResultsSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */; };
 		758966E5F3EA2ADED0D3A50D /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = AAC67A7C4E59D36AC52E5303 /* awsconfiguration.json */; };
 		7B39E01C60F48E9BF194595B /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 839064B7D0B3AB1E6BF3A79F /* amplifyconfiguration.json */; };
+		ED97DCAD2A0D85ADF0243972 /* Pods_AlzDetectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED5568E7322D221D618BFE2 /* Pods_AlzDetectionTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +82,6 @@
 		32C95C242B4F7F1700DC358D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		32FBB9DB2B869DDB004D7E02 /* gifLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifLoader.swift; sourceTree = "<group>"; };
 		32FBB9DD2B86A0F7004D7E02 /* loadingGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loadingGif.gif; path = Assets.xcassets/loadingGif.dataset/loadingGif.gif; sourceTree = "<group>"; };
-		4B7CD0C82B936E2F00CE9BD1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -88,11 +89,14 @@
 		4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsSentViewController.swift; sourceTree = "<group>"; };
 		4FF4B369E171596C3C292A16 /* Pods-AlzDetectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzDetectionTests.debug.xcconfig"; path = "Target Support Files/Pods-AlzDetectionTests/Pods-AlzDetectionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		636F855FA9520FAE74B6866E /* Pods-AlzDetection-AlzDetectionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzDetection-AlzDetectionUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlzDetection-AlzDetectionUITests/Pods-AlzDetection-AlzDetectionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7ED5568E7322D221D618BFE2 /* Pods_AlzDetectionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzDetectionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		839064B7D0B3AB1E6BF3A79F /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		9551CC041C0C97E1731ABAA5 /* Pods-AlzDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzDetection.debug.xcconfig"; path = "Target Support Files/Pods-AlzDetection/Pods-AlzDetection.debug.xcconfig"; sourceTree = "<group>"; };
 		99CE059D08FAD267F760B011 /* Pods-AlzDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzDetection.release.xcconfig"; path = "Target Support Files/Pods-AlzDetection/Pods-AlzDetection.release.xcconfig"; sourceTree = "<group>"; };
 		AAC67A7C4E59D36AC52E5303 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		DAD2993B628D8CECF81D28BF /* Pods_AlzDetection_AlzDetectionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzDetection_AlzDetectionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F101EABB576AE13AEDD8DAE8 /* Pods-AlzDetectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzDetectionTests.release.xcconfig"; path = "Target Support Files/Pods-AlzDetectionTests/Pods-AlzDetectionTests.release.xcconfig"; sourceTree = "<group>"; };
+		F451D9097956850D2BAB397F /* Pods_AlzDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C3965F85A661530398FF53 /* Pods-AlzDetection-AlzDetectionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzDetection-AlzDetectionUITests.release.xcconfig"; path = "Target Support Files/Pods-AlzDetection-AlzDetectionUITests/Pods-AlzDetection-AlzDetectionUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 				32091F472BA4E7FE001ED82A /* QuickPoseCamera in Frameworks */,
 				32A231202B79560B00DEE7E2 /* AWSS3StoragePlugin in Frameworks */,
 				32091F4B2BA4E7FE001ED82A /* QuickPoseMP in Frameworks */,
+				2261D89B26D29E36BA5DF785 /* Pods_AlzDetection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED97DCAD2A0D85ADF0243972 /* Pods_AlzDetectionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ED2736469F525E8774E28F6 /* Pods_AlzDetection_AlzDetectionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +147,7 @@
 				DA79F34486CBE7ED7748FD6B /* AmplifyConfig */,
 				FD828EFEC3E6079D27EBE66F /* AmplifyModels */,
 				A9AC594BDB50F38ED9745C45 /* Pods */,
+				F751B22C465B46A3AD436444 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,7 +174,6 @@
 				4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */,
 				4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */,
 				4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */,
-				4B7CD0C82B936E2F00CE9BD1 /* TableViewCell.swift */,
 				4B849BEE2B5C2CC900B6A506 /* ClinicianViewController.swift */,
 				4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */,
 				325ADD812B4C6A0100000428 /* Assets.xcassets */,
@@ -219,6 +226,16 @@
 			name = AmplifyConfig;
 			sourceTree = "<group>";
 		};
+		F751B22C465B46A3AD436444 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F451D9097956850D2BAB397F /* Pods_AlzDetection.framework */,
+				DAD2993B628D8CECF81D28BF /* Pods_AlzDetection_AlzDetectionUITests.framework */,
+				7ED5568E7322D221D618BFE2 /* Pods_AlzDetectionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD828EFEC3E6079D27EBE66F /* AmplifyModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +254,7 @@
 				325ADD712B4C6A0000000428 /* Sources */,
 				325ADD722B4C6A0000000428 /* Frameworks */,
 				325ADD732B4C6A0000000428 /* Resources */,
+				AF0972C7A38FBEE6BEFC8199 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +303,7 @@
 				325ADD912B4C6A0100000428 /* Sources */,
 				325ADD922B4C6A0100000428 /* Frameworks */,
 				325ADD932B4C6A0100000428 /* Resources */,
+				28736853550243BB4B058490 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,6 +393,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		28736853550243BB4B058490 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlzDetection-AlzDetectionUITests/Pods-AlzDetection-AlzDetectionUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlzDetection-AlzDetectionUITests/Pods-AlzDetection-AlzDetectionUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlzDetection-AlzDetectionUITests/Pods-AlzDetection-AlzDetectionUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2E9E20A7533AA6A6E17DB003 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +454,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF0972C7A38FBEE6BEFC8199 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlzDetection/Pods-AlzDetection-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlzDetection/Pods-AlzDetection-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlzDetection/Pods-AlzDetection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D0D366F5F50853CA503FA760 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,7 +505,6 @@
 				326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */,
 				326FCED02B51E47500E401BD /* HomeViewController.swift in Sources */,
 				32C95C252B4F7F1700DC358D /* LoginViewController.swift in Sources */,
-				4B7CD0C92B936E2F00CE9BD1 /* TableViewCell.swift in Sources */,
 				3283DF1C2B63157800084997 /* CustomCameraController.swift in Sources */,
 				4B849BEF2B5C2CC900B6A506 /* ClinicianViewController.swift in Sources */,
 				4B849BE92B5C264600B6A506 /* ThankYouViewController.swift in Sources */,
@@ -644,12 +696,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HA6F7UATS;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzDetection/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please work";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save to Library";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = TMP;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = TRUE;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -660,7 +713,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -676,12 +729,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HA6F7UATS;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlzDetection/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please work";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save to Library";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = TMP;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = TRUE;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -692,7 +746,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetection0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -708,7 +762,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HA6F7UATS;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -729,7 +783,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HA6F7UATS;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -749,7 +803,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HA6F7UATS;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetectionUITests";
@@ -768,7 +822,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HA6F7UATS;
+				DEVELOPMENT_TEAM = 2435XT3Q88;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Hpadi2020-fau.edu.AlzDetectionUITests";

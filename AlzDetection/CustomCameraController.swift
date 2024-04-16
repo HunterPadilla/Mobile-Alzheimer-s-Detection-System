@@ -31,7 +31,6 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
     //This Function is triggered when the user taps the screen
     @objc func tapClick(){
         //Stops the current screen recording, allows the user to save the screen recording to the phone
-        //TODO: Once the recording is FULLY complete, upload to S3
         stopScreenRecording()
         
     }
@@ -120,7 +119,7 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
                     return
                 }
             
-            print(tmpVar.videoURL!)
+            print("Video Saved Temporarily at:",tmpVar.videoURL!)
             }
         performSegue(withIdentifier: "recordingSaved", sender: self)
             
@@ -157,32 +156,4 @@ extension CustomCameraViewController: RPPreviewViewControllerDelegate {
     }
     
 }
-    
-///Below is code that might assist in the future based on previous application versions
-///
-///
-////Code to enable TTS, Import AVFoundation and copy paste where needed
-//let synthesizer = AVSpeechSynthesizer()
-//
-//func readTextAloud(){
-//    
-//    //Complete the String with whatever you want to say.
-//    let utterance = AVSpeechUtterance(string: "To prepare for task #1, please step three to five feet away from your phone at an angle where your camera can see you. Press record button to start, and return to your desired testing position.")
-//    
-//    //Language Settings for TTS
-//    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-//    
-//    //Speed of TTS (0.4 is just slightly slower than normal talking speed)
-//    utterance.rate = 0.4
-//    
-//    //Begins the TTS
-//    synthesizer.speak(utterance)
-//}
-
-
-
-    
-
-
-
-
+  
