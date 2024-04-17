@@ -39,7 +39,7 @@
 		4B849BED2B5C2C1D00B6A506 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */; };
 		4B849BEF2B5C2CC900B6A506 /* ClinicianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BEE2B5C2CC900B6A506 /* ClinicianViewController.swift */; };
 		4B849BF12B5C2E5F00B6A506 /* ResultsSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */; };
-		4BB61A4E2BCEED8B00EB5BE9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB61A4C2BCEED8A00EB5BE9 /* TableViewCell.swift */; };
+		4BBF2BC92BCF5D970035195C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF2BC82BCF5D970035195C /* TableViewCell.swift */; };
 		758966E5F3EA2ADED0D3A50D /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = AAC67A7C4E59D36AC52E5303 /* awsconfiguration.json */; };
 		7B39E01C60F48E9BF194595B /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 839064B7D0B3AB1E6BF3A79F /* amplifyconfiguration.json */; };
 		ED97DCAD2A0D85ADF0243972 /* Pods_AlzDetectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED5568E7322D221D618BFE2 /* Pods_AlzDetectionTests.framework */; };
@@ -88,7 +88,7 @@
 		4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		4B849BEE2B5C2CC900B6A506 /* ClinicianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicianViewController.swift; sourceTree = "<group>"; };
 		4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsSentViewController.swift; sourceTree = "<group>"; };
-		4BB61A4C2BCEED8A00EB5BE9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = "../../../../../../../FrontEnd-Init/Mobile-Alzheimer-s-Detection-System/AlzDetection/TableViewCell.swift"; sourceTree = "<group>"; };
+		4BBF2BC82BCF5D970035195C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4FF4B369E171596C3C292A16 /* Pods-AlzDetectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzDetectionTests.debug.xcconfig"; path = "Target Support Files/Pods-AlzDetectionTests/Pods-AlzDetectionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		636F855FA9520FAE74B6866E /* Pods-AlzDetection-AlzDetectionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzDetection-AlzDetectionUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlzDetection-AlzDetectionUITests/Pods-AlzDetection-AlzDetectionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7ED5568E7322D221D618BFE2 /* Pods_AlzDetectionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzDetectionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,8 +176,8 @@
 				4B849BE82B5C264600B6A506 /* ThankYouViewController.swift */,
 				4B849BEA2B5C2B4200B6A506 /* InstructionsViewController.swift */,
 				4B849BEC2B5C2C1D00B6A506 /* ResultsViewController.swift */,
+				4BBF2BC82BCF5D970035195C /* TableViewCell.swift */,
 				4B849BEE2B5C2CC900B6A506 /* ClinicianViewController.swift */,
-				4BB61A4C2BCEED8A00EB5BE9 /* TableViewCell.swift */,
 				4B849BF02B5C2E5F00B6A506 /* ResultsSentViewController.swift */,
 				325ADD812B4C6A0100000428 /* Assets.xcassets */,
 				32FBB9DD2B86A0F7004D7E02 /* loadingGif.gif */,
@@ -503,7 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BB61A4E2BCEED8B00EB5BE9 /* TableViewCell.swift in Sources */,
+				4BBF2BC92BCF5D970035195C /* TableViewCell.swift in Sources */,
 				4B849BF12B5C2E5F00B6A506 /* ResultsSentViewController.swift in Sources */,
 				32A231142B793B7800DEE7E2 /* postTestViewController.swift in Sources */,
 				326FCED22B51E6A800E401BD /* SignUpViewController.swift in Sources */,
