@@ -9,6 +9,7 @@ Install Amplify CLI [https://docs.amplify.aws/swift/start/getting-started/instal
 Sign-in URL: https://298516394167.signin.aws.amazon.com/console
 - username: G_5
 - password: fea4pem3KBU5dvz@kqb
+Make sure the "region" in the AWS console is set to "us-east-2" (Ohio)
 
 [May need to create a IAM User to generate a Secret Access Key]
 - Access Key: 
@@ -44,6 +45,14 @@ Get your free SDK key on [https://dev.quickpose.ai](https://dev.quickpose.ai)
 - Create SDK Key
 - Enter Bundle ID 
 - Copy generated SDK Key into var quickPose in CustomCameraController.swift file
+
+----------------------------------------------------------------------------------
+[Installing cocoapods for packages/dependencies]
+Navigate to the repo/src code root folder
+
+Run commands: 
+- "sudo gem install cocoapods"
+- "pod install"
 
 ----------------------------------------------------------------------------------
 [Installing application on physical Mobile Device]
